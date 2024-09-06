@@ -5,58 +5,58 @@ export default function Sidebar(){
                 <div className="mb-4">Table of contents</div>
                 <ul>
                     <li className="mb-1">
-                        <a href="">1.  Abstract</a>
+                        <a href="#abs">1.  Abstract</a>
                     </li>
                     <li>
-                        <a>2.  Introduction</a>
+                        <a href="#Intro">2.  Introduction</a>
                     </li>
                     <li>
-                        <a>3.  Background</a>
+                        <a href="#back">3.  Background</a>
                         <ul>
                             <li className="ml-5">
-                                <a>3.1 What is a Graph ?</a>
+                                <a href="#Bg">3.1 What is a Graph ?</a>
                             </li>
                             <li className="ml-5">
-                                <a>3.2 Graph Operations</a>
+                                <a href="#BO">3.2 Graph Operations</a>
                             </li>
                             <li className="ml-">
-                                <a>3.3 Types of Graphs</a>
+                                <a href="#Bgraph">3.3 Types of Graphs</a>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a>4. Graph Representation</a>
+                        <a href="GR">4. Graph Representation</a>
                         <ul>
                             <li className="ml-5">
-                                <a>4.1 Edge list</a>
+                                <a href="#EL">4.1 Edge list</a>
                             </li>
                             <li className="ml-5"> 
-                                <a>4.2 Adjacency list</a>
+                                <a href="#AL">4.2 Adjacency list</a>
                             </li>
                             <li className="ml-5">
-                                <a>4.3 Adjacency Matrix</a>
+                                <a href="#AM">4.3 Adjacency Matrix</a>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a>5. Graphh Traversal</a>
+                        <a href="#GT">5. Graphh Traversal</a>
                         <ul>
                             <li className="ml-5">
-                                <a>5.2 Breadth First Search</a>
+                                <a href="#bfs">5.2 Breadth First Search</a>
                             </li>
                             <li className="ml-5">
-                                <a>5.2 Depth First Search</a>
+                                <a href="#dfs">5.2 Depth First Search</a>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a>6. Application</a>
+                        <a href="#application">6. Application</a>
                     </li>
                     <li>
-                        <a>7. Conclusion</a>
+                        <a href="#conclusion">7. Conclusion</a>
                     </li>
                     <li>
-                        <a>8. Referances</a>
+                        <a href="#refe">8. Referances</a>
                     </li>
                 </ul>
             </div>
