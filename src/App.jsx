@@ -6,13 +6,12 @@ import ScrollReveal from "scrollreveal";
 
 function App() {
   useEffect(() => {
-    // Initialize ScrollReveal and add animations to elements
     ScrollReveal().reveal(".reveal", {
       origin: "bottom",
       distance: "50px",
       duration: 1000,
       delay: 200,
-      reset: true, // Animations reset when scrolling up/down
+      reset: true, 
     });
   }, []);
 

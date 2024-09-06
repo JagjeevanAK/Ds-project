@@ -1,7 +1,7 @@
 export default function Conclusion(){
     return(
         <div>
-            <div className="text-2xl font-semibold my-8">Conclusion</div>
+            <div id="conclusion" className="text-2xl font-semibold my-8">Conclusion</div>
             <div>
                 Graphs are a commonly used data structure
                 because they can be used to model many

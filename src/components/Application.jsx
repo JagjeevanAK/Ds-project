@@ -1,7 +1,7 @@
 export default function Application(){
     return(
         <div>
-            <div className="text-2xl my-8 font-semibold">
+            <div id="application" className="text-2xl my-8 font-semibold">
                 Application of Graphs
             </div>
             <div>

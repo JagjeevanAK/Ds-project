@@ -1,11 +1,23 @@
+import { useEffect } from "react";
+import scrollreveal from "scrollreveal";
+
 export default function Background(){
+    useEffect(() => {
+        scrollreveal().reveal(".reveal", {
+          origin: "bottom",
+          distance: "50px",
+          duration: 1000,
+          delay: 200,
+          reset: true, 
+        });
+    }, []);
     return(
         <div>
-            <div className="my-10 text-2xl">Background</div>
-            <div>
+            <div id="back" className="my-10 text-2xl reveal">Background</div>
+            <div id="Bg" className="font-semibold reveal">
                 What is a Graph?
             </div>
-            <div>
+            <div className="reveal">
                 <p>
                     Graph is a pictorial representation of a set of
                     objects, where the object pairs are connected
@@ -38,10 +50,10 @@ export default function Background(){
                     there is a path from A to B.
                 </p>
             </div>
-            <div>
+            <div id="BO" className="font-semibold reveal">
                 Graph Operations
             </div>
-            <div className="pt-4">
+            <div className="pt-4 reveal">
                 The basic primary operations provided by a
                 graph data structure are as follows:
                 <ul className="pt-4 ml-8 list-disc list-inside">
@@ -100,8 +112,8 @@ export default function Background(){
                     </li>
                 </ul>
             </div>
-            <div className="mt-5">Types of Graphs :</div>
-            <span>1{")"} Directed Graph: </span>
+            <div id="Bgr" className="font-semibold my-5 reveal">Types of Graphs :</div>
+            <span className="reveal">1{")"} Directed Graph: </span>
             <span>
                 A directed graph is a graph where all the edges are directed from
                 one vertex to another. The order of vertices in
@@ -116,9 +128,9 @@ export default function Background(){
                 a vertex to itself. Example of a directed graph
                 is shown in Fig. 2.
             </span>
-            <div className="flex justify-center my-10">Fig. 2 Directed graph</div>
-            <span>2{")"} Undirected Graph: </span>
-            <span>
+            <div className="flex justify-center my-10 reveal">Fig. 2 Directed graph</div>
+            <span className="reveal">2{")"} Undirected Graph: </span>
+            <span className="reveal">
                 A directed graph is a
                 graph where all the edges are bidirectional.
                 The order of vertices in the pairs in the edge
@@ -127,8 +139,8 @@ export default function Background(){
                 straight lines. Example of an undirected graph
                 is shown in Fig.
             </span>
-            <div className="my-10 flex justify-center">Fig. 3Undirected graph</div>
-            <span>3{")"} Weighted Graph: </span>
+            <div className="my-10 flex justify-center reveal">Fig. 3Undirected graph</div>
+            <span className="reveal">3{")"} Weighted Graph: </span>
             <span> A weighted graph is a
                 graph where each edge has an associated
                 numerical value, called weight. Weighted
@@ -137,9 +149,9 @@ export default function Background(){
                 the “cost” of the edge. Example of a weighted
                 graph is shown in Fig. 4.
             </span>
-            <div className="my-10 flex justify-center">Fig. 4 Weighted graph</div>
-            <span>4{")"} Space Graphs and Dense Graphs:</span>
-            <span>
+            <div className="my-10 flex justify-center reveal">Fig. 4 Weighted graph</div>
+            <span className="reveal">4{")"} Space Graphs and Dense Graphs:</span>
+            <span className="reveal">
                 Consider a graph having n nodes. A graph is
                 said to be a sparse graph if it has less than n2
                 edges. For example, a graph with n nodes
