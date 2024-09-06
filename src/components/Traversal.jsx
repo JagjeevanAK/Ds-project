@@ -15,7 +15,7 @@ export default function Traversal(){
     return(
         <div>
             <div id="GT" className="reveal text-2xl my-8 font-semibold">Graph traversal techniques</div>
-            <div>
+            <div className="reveal">
                 Graph traversal means visiting all the nodes
                 of the graph. A structured system is required
                 by many applications of graphs to examine

@@ -15,7 +15,7 @@ export default function Representation(){
     return(
         <div>
             <div id="GR" className="reveal my-10 text-2xl">Graph Representation</div>
-            <div>
+            <div className="reveal">
                 Graph is a mathematical structure and finds
                 its applications in various Computer fields.
                 The graph problems should be represented in

@@ -1,16 +1,16 @@
 export default function Header(){
     return(
         <div className="w-screen pb-6">
-            <div className="flex justify-center text-7xl font-semibold p-8">
+            <h1 className="flex justify-center text-7xl font-semibold p-8">
                 A Brief Study of Graph Data Structure
-            </div>
+            </h1>
             <div className="mb-6">
-                <div className="flex justify-center text-3xl font-bold">
+                <h2 className="flex justify-center text-3xl font-bold">
                     Jagjeevan Kashid, Prabhanjan Shetty, Piyush Wadkar
-                </div>
-                <div className="flex justify-center text-xl">
+                </h2>
+                <h3 className="flex justify-center text-xl">
                     S.Y.B.Tech Student, Artificial Intelligence, Annasaheb Dange College of Engineering Technology, Ashta.
-                </div>
+                </h3>
             </div>
         </div>
     )
