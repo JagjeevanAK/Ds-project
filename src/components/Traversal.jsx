@@ -20,7 +20,7 @@ export default function Traversal(){
                 </ol>
             </div>
             <div>
-                <div>Breadth First Search:</div>
+                <div id="bfs" className="font-semibold">Breadth First Search:</div>
                 <div>
                     <p>
                     Given an input graph G = (V, E) and a source
@@ -71,7 +71,7 @@ export default function Traversal(){
                 <div className="my-6 font-semibold">Code:</div>
             </div>
             <div>
-                <div className="font-semibold text-2xl">Depth First Search:</div>
+                <div id="dfs" className="font-semibold text-2xl">Depth First Search:</div>
                 <div>
                     <p>
                         Given an input graph G = (V, E) and a source

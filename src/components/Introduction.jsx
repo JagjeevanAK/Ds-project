@@ -1,9 +1,21 @@
+import { useEffect } from "react";
+import scrollreveal from "scrollreveal";
+
 export default function Introduction(){
+    useEffect(() => {
+        scrollreveal().reveal(".reveal", {
+          origin: "bottom",
+          distance: "50px",
+          duration: 1000,
+          delay: 200,
+          reset: true, 
+        });
+    }, []);
     return (
         <div>
             <div>
-                <div>
-                    <span className="font-bold">Abstract:</span>
+                <div className="reveal">
+                    <span id="abs" className="font-bold">Abstract:</span>
                     <span>
                         Graphs are a fundamental data structure in the world of programming. Graphs are used
                         as a mean to store and analyse metadata. A graph implementation needs understanding of some of
@@ -19,10 +31,10 @@ export default function Introduction(){
                     </div>
                 </div>
             </div>
-            <div className="pt-10 font-extrabold">
+            <div id="Intro" className="pt-10 font-extrabold reveal">
                 Introduction
             </div>
-            <div>
+            <div className="reveal">
                 <p className="pt-4">
                     Graph is a data structure that consists of a
                     finite set of vertices, together with a set of

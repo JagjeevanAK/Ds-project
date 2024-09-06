@@ -1,4 +1,3 @@
-import { useRef } from "react";
 import Application from "./Application";
 import Background from "./Background";
 import Conclusion from "./Conclusion";

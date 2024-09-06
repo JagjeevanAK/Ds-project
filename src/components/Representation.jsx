@@ -1,7 +1,7 @@
 export default function Representation(){
     return(
         <div>
-            <div className="my-10 text-2xl">Graph Representation</div>
+            <div id="GR" className="my-10 text-2xl">Graph Representation</div>
             <div>
                 Graph is a mathematical structure and finds
                 its applications in various Computer fields.
@@ -14,7 +14,7 @@ export default function Representation(){
                 represent a graph is using Edge List.
             </div>
             <div className="mt-6">
-                <span className="font-semibold">Edge List: </span>
+                <span id="EL" className="font-semibold">Edge List: </span>
                 <span>
                     This structure simply maintains
                     and stores the vertices and the edges into
@@ -43,7 +43,7 @@ export default function Representation(){
                 <div className="flex justify-center text-2xl font-bold my-8">Code{"(Edge list)"}</div>
             </div>
             <div>
-                <span className="font-semibold">Adjacency List: </span>
+                <span id="AL" className="font-semibold">Adjacency List: </span>
                 <span>
                     This list structure extends
                     the edge list structure by adding incidence
@@ -144,7 +144,7 @@ export default function Representation(){
                 <div className="flex justify-center text-2xl font-bold my-8">Code(Adjacency List)</div>
             </div>
             <div>
-                <span className="font-semibold">Adjacency Matrix:</span>
+                <span id="AM" className="font-semibold">Adjacency Matrix:</span>
                 <span>
                     The adjacency matrix
                     structure augments the edge list structure with

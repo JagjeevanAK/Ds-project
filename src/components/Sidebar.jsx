@@ -20,12 +20,12 @@ export default function Sidebar(){
                                 <a href="#BO">3.2 Graph Operations</a>
                             </li>
                             <li className="ml-">
-                                <a href="#Bgraph">3.3 Types of Graphs</a>
+                                <a href="#Bgr">3.3 Types of Graphs</a>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a href="GR">4. Graph Representation</a>
+                        <a href="#GR">4. Graph Representation</a>
                         <ul>
                             <li className="ml-5">
                                 <a href="#EL">4.1 Edge list</a>
