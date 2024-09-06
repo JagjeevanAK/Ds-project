@@ -5,58 +5,58 @@ export default function Sidebar(){
                 <div className="mb-4">Table of contents</div>
                 <ul>
                     <li className="mb-1">
-                        <button>1.  Abstract</button>
+                        <a href="">1.  Abstract</a>
                     </li>
                     <li>
-                        <button>2.  Introduction</button>
+                        <a>2.  Introduction</a>
                     </li>
                     <li>
-                        <button>3.  Background</button>
+                        <a>3.  Background</a>
                         <ul>
                             <li className="ml-5">
-                                <button>3.1 What is a Graph ?</button>
+                                <a>3.1 What is a Graph ?</a>
                             </li>
                             <li className="ml-5">
-                                <button>3.2 Graph Operations</button>
+                                <a>3.2 Graph Operations</a>
                             </li>
                             <li className="ml-">
-                                <button>3.3 Types of Graphs</button>
+                                <a>3.3 Types of Graphs</a>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <button>4. Graph Representation</button>
+                        <a>4. Graph Representation</a>
                         <ul>
                             <li className="ml-5">
-                                <button>4.1 Edge list</button>
+                                <a>4.1 Edge list</a>
                             </li>
                             <li className="ml-5"> 
-                                <button>4.2 Adjacency list</button>
+                                <a>4.2 Adjacency list</a>
                             </li>
                             <li className="ml-5">
-                                <button>4.3 Adjacency Matrix</button>
+                                <a>4.3 Adjacency Matrix</a>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <button>5. Graphh Traversal</button>
+                        <a>5. Graphh Traversal</a>
                         <ul>
                             <li className="ml-5">
-                                <button>5.2 Breadth First Search</button>
+                                <a>5.2 Breadth First Search</a>
                             </li>
                             <li className="ml-5">
-                                <button>5.2 Depth First Search</button>
+                                <a>5.2 Depth First Search</a>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <button>6. Application</button>
+                        <a>6. Application</a>
                     </li>
                     <li>
-                        <button>7. Conclusion</button>
+                        <a>7. Conclusion</a>
                     </li>
                     <li>
-                        <button>8. Referances</button>
+                        <a>8. Referances</a>
                     </li>
                 </ul>
             </div>
