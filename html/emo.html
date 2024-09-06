@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>A* Search Algorithm Visualization</title>
+    <style>
+        /* CSS styles for the visualization */
+        #grid {
+            display: grid;
+            grid-template-columns: repeat(20, 10px);
+            grid-template-rows: repeat(20, 10px);
+            border: 1px solid black;
+        }
+
+        .node {
+            width: 10px;
+            height: 10px;
+            border: 1px solid gray;
+            text-align: center;
+        }
+
+        .start {
+            background-color: green;
+        }
+
+        .goal {
+            background-color: blue;
+        }
+
+        .closed {
+            background-color: red;
+        }
+
+        .open {
+            background-color: yellow;
+        }
+
+        .path {
+            background-color: purple;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="grid"></div>
+    <script>
+        const grid = document.getElementById('grid');
+        const rows = 20;
+        const cols = 20;
+
+        // Create the grid nodes
+        for (let i = 0; i < rows; i++) {
+            for (let j = 0; j < cols; j++) {
+                const node = document.createElement('div');
+                node.classList.add('node');
+                node.setAttribute('data-row', i);
+                node.setAttribute('data-col', j);
+                grid.appendChild(node);
+            }
+        }
+
+        // Define the start and goal nodes
+        const startNode = grid.querySelector('[data-row="0"][data-col="0"]');
+        const goalNode = grid.querySelector('[data-row="19"][data-col="19"]');
+
+        startNode.classList.add('start');
+        goalNode.classList.add('goal');
+
+        // A* search algorithm
+        function aStarSearch() {
+            const openSet = new Set();
+            const closedSet = new Set();
+            const cameFrom = new Map();
+            const gScore = new Map();
+            const fScore = new Map();
+
+            openSet.add(startNode);
+            gScore.set(startNode, 0);
+            fScore.set(startNode, heuristic(startNode, goalNode));
+
+            while (openSet.size > 0) {
+                const currentNode = Array.from(openSet).reduce((minNode, node) => {
+                    return fScore.get(node) < fScore.get(minNode) ? node : minNode;
+                }, startNode);
+
+                if (currentNode === goalNode) {
+                    reconstructPath(cameFrom, goalNode);
+                    return;
+                }
+
+                openSet.delete(currentNode);
+                closedSet.add(currentNode);
+
+                for (const neighbor of getNeighbors(currentNode)) {
+                    if (closedSet.has(neighbor)) {
+                        continue;
+                    }
+
+                    const tentativeGScore = gScore.get(currentNode) + 1;
+                    if (!gScore.has(neighbor) || tentativeGScore < gScore.get(neighbor)) {
+                        cameFrom.set(neighbor, currentNode);
+                        gScore.set(neighbor, tentativeGScore);
+                        fScore.set(neighbor, tentativeGScore + heuristic(neighbor, goalNode));
+                        if (!openSet.has(neighbor)) {
+                            openSet.add(neighbor);
+                        }
+                    }
+                }
+            }
+        }
+
+        // Heuristic function (Manhattan distance)
+        function heuristic(node, goal) {
+            const dx = Math.abs(node.getAttribute('data-row') - goal.getAttribute('data-row'));
+            const dy = Math.abs(node.getAttribute('data-col') - goal.getAttribute('data-col'));
+            return dx + dy;
+        }
+
+        // Get neighbors of a node
+        function getNeighbors(node) {
+            const neighbors = [];
+            const row = parseInt(node.getAttribute('data-row'));
+            const col = parseInt(node.getAttribute('data-col'));
+
+            // Check up, down, left, and right neighbors
+            if (row > 0) {
+                neighbors.push(grid.querySelector(`[data-row="${row - 1}"][data-col="${col}"]`));
+            }
+            if (row < rows - 1) {
+                neighbors.push(grid.querySelector(`[data-row="${row + 1}"][data-col="${col}"]`));
+            }
+            if (col > 0) {
+                neighbors.push(grid.querySelector(`[data-row="${row}"][data-col="${col - 1}"]`));
+            }
+            if (col < cols - 1) {
+                neighbors.push(grid.querySelector(`[data-row="${row}"][data-col="${col + 1}"]`));
+            }
+
+            return neighbors;
+        }
+
+        // Reconstruct the path from the goal to the start
+        function reconstructPath(cameFrom, current) {
+            if (cameFrom.has(current)) {
+                reconstructPath(cameFrom, cameFrom.get(current));
+            }
+            current.classList.add('path');
+        }
+
+        // Start the visualization
+        aStarSearch();
+    </script>
+</body>
+
+</html>
