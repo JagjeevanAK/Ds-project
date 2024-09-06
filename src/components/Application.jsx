@@ -1,12 +1,25 @@
+import { useEffect } from "react";
+import scrollreveal from "scrollreveal";
+
 export default function Application(){
+    useEffect(() => {
+        scrollreveal().reveal(".reveal", {
+          origin: "bottom",
+          distance: "50px",
+          duration: 1000,
+          delay: 200,
+          reset: true, 
+        });
+    }, []);
+
     return(
         <div>
-            <div id="application" className="text-2xl my-8 font-semibold">
+            <div id="application" className="reveal text-2xl my-8 font-semibold">
                 Application of Graphs
             </div>
             <div>
-                <ul className="list-disc list-inside">
-                    <li>
+                <ul className=" list-disc list-inside">
+                    <li className="reveal">
                         In road networks, we can consider the
                         intersections as vertices and the road
                         segments between them as the edges.
@@ -18,7 +31,7 @@ export default function Application(){
                         patterns, traffic light timings and many
                         aspects of transportation.
                     </li>
-                    <li>
+                    <li className="reveal">
                         Directed graphs can be used to map
                         the links between pages within a
                         website. In this case each web page is
@@ -27,7 +40,7 @@ export default function Application(){
                         used to analyse ease of navigation
                         between different parts of the site.
                     </li>
-                    <li>
+                    <li className="reveal">
                         In the case of power grid and water
                         network, vertices represent connection
                         points and edges represent the wires
@@ -36,14 +49,14 @@ export default function Application(){
                         infrastructure that matches the
                         required demands.
                     </li>
-                    <li>
+                    <li className="reveal">
                         Scene graphs represent the logical or
                         spatial relationships between objects
                         in a scene. Scene graphs are widely
                         used in the graphics and computer
                         games industry.
                     </li>
-                    <li>
+                    <li className="reveal">
                         Graph theory is also widely used in
                         sociology as a way, for example, to
                         measure actors' prestige or to explore
@@ -51,7 +64,7 @@ export default function Application(){
                         use of social network analysis
                         software.
                     </li>
-                    <li>
+                    <li className="reveal">
                         A common problem in AI is to find
                         some goal that satisfies a list of
                         constraints. For example, for a

@@ -1,8 +1,20 @@
+import { useEffect } from "react";
+import scrollreveal from "scrollreveal";
+
 export default function Referance(){
+    useEffect(() => {
+        scrollreveal().reveal(".reveal", {
+          origin: "bottom",
+          distance: "50px",
+          duration: 1000,
+          delay: 200,
+          reset: true, 
+        });
+    }, []);
     return(
         <div>
-            <div id="refe" className="my-8 text-2xl font-semibold">Reference</div>
-            <div>
+            <div id="refe" className="reveal my-8 text-2xl font-semibold">Reference</div>
+            <div className="reveal">
                 <ol className="list-decimal list-inside">
                     <li>
                         IJARCCE

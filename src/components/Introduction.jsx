@@ -11,6 +11,7 @@ export default function Introduction(){
           reset: true, 
         });
     }, []);
+    
     return (
         <div>
             <div>

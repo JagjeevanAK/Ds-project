@@ -1,8 +1,21 @@
+import { useEffect } from "react";
+import scrollreveal from "scrollreveal";
+
 export default function Conclusion(){
+    useEffect(() => {
+        scrollreveal().reveal(".reveal", {
+          origin: "bottom",
+          distance: "50px",
+          duration: 1000,
+          delay: 200,
+          reset: true, 
+        });
+    }, []);
+
     return(
         <div>
-            <div id="conclusion" className="text-2xl font-semibold my-8">Conclusion</div>
-            <div>
+            <div id="conclusion" className="reveal text-2xl font-semibold my-8">Conclusion</div>
+            <div className="reveal">
                 Graphs are a commonly used data structure
                 because they can be used to model many
                 real-world problems. The graph makes large

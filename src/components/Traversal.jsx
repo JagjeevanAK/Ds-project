@@ -1,14 +1,27 @@
+import { useEffect } from "react";
+import scrollreveal from "scrollreveal";
+
 export default function Traversal(){
+    useEffect(() => {
+        scrollreveal().reveal(".reveal", {
+          origin: "bottom",
+          distance: "50px",
+          duration: 1000,
+          delay: 200,
+          reset: true, 
+        });
+    }, []);
+
     return(
         <div>
-            <div id="GT" className="text-2xl my-8 font-semibold">Graph traversal techniques</div>
+            <div id="GT" className="reveal text-2xl my-8 font-semibold">Graph traversal techniques</div>
             <div>
                 Graph traversal means visiting all the nodes
                 of the graph. A structured system is required
                 by many applications of graphs to examine
                 the vertices and edges of a graph.
             </div>
-            <div>
+            <div className="reveal">
                 There are two graph traversal methods as follows:
                 <ol className="list-decimal list-inside">
                     <li>
@@ -20,8 +33,8 @@ export default function Traversal(){
                 </ol>
             </div>
             <div>
-                <div id="bfs" className="font-semibold">Breadth First Search:</div>
-                <div>
+                <div id="bfs" className="reveal font-semibold">Breadth First Search:</div>
+                <div className="reveal">
                     <p>
                     Given an input graph G = (V, E) and a source
                     vertex S, from where the searching starts. We
@@ -37,10 +50,10 @@ export default function Traversal(){
                     shown in Fig. 7.
                     </p>
                 </div>
-                <div className="flex justify-center font-semibold my-8">Fig.7 Implementation of BFS</div>
-                <div className="font-semibold">Algorithm:</div>
+                <div className="reveal flex justify-center font-semibold my-8">Fig.7 Implementation of BFS</div>
+                <div className="reveal font-semibold">Algorithm:</div>
                 <div>
-                    <ol className="list-inside list-decimal">
+                    <ol className="reveal list-inside list-decimal">
                         <li>
                             Input the vertices of the graph and its
                             edges G = (V, E)
@@ -68,11 +81,11 @@ export default function Traversal(){
                         </li>
                     </ol>
                 </div>
-                <div className="my-6 font-semibold">Code:</div>
+                <div className="reveal my-6 font-semibold">Code:</div>
             </div>
             <div>
-                <div id="dfs" className="font-semibold text-2xl">Depth First Search:</div>
-                <div>
+                <div id="dfs" className="reveal font-semibold text-2xl">Depth First Search:</div>
+                <div className="reveal">
                     <p>
                         Given an input graph G = (V, E) and a source
                         vertex S, from where the searching starts. We
@@ -86,10 +99,10 @@ export default function Traversal(){
                     </p>
                     <div className="flex justify-center font-semibold my-7">Fig. 8 Implementation of DFS</div>
                 </div>
-                <div className="font-semibold">Algorithm:</div>
+                <div className="reveal font-semibold">Algorithm:</div>
                 <div>
                     <p>
-                        <ol className="list-inside list-decimal">
+                        <ol className="reveal list-inside list-decimal">
                             <li>
                                 Input the vertices and edges of the graph G = (V, E).
                             </li>
@@ -119,7 +132,7 @@ export default function Traversal(){
                         </ol>
                     </p>
                 </div>
-                <div className="my-6 font-semibold">Code:</div>
+                <div className="reveal my-6 font-semibold">Code:</div>
             </div>
         </div>
     )

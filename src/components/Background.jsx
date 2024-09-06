@@ -11,6 +11,7 @@ export default function Background(){
           reset: true, 
         });
     }, []);
+    
     return(
         <div>
             <div id="back" className="my-10 text-2xl reveal">Background</div>
@@ -40,7 +41,7 @@ export default function Background(){
                     E = {"{ab, ac, bd, cd, de}"}
                 </p>
                 <p className="flex justify-center mt-10">Fig.1 Graph Structure</p>
-                <p className="pt-4">
+                <p className="pt-4 reveal">
                     Adjacency relation: Node B is adjacent to A if
                     there is an edge from A to B. <br />
                     Paths and reachability: A path from A to B is a
@@ -56,7 +57,7 @@ export default function Background(){
             <div className="pt-4 reveal">
                 The basic primary operations provided by a
                 graph data structure are as follows:
-                <ul className="pt-4 ml-8 list-disc list-inside">
+                <ul className="reveal pt-4 ml-8 list-disc list-inside">
                     <li>
                         Addition of a vertex: adding a vertex to
                         a graph when needed.
@@ -114,7 +115,7 @@ export default function Background(){
             </div>
             <div id="Bgr" className="font-semibold my-5 reveal">Types of Graphs :</div>
             <span className="reveal">1{")"} Directed Graph: </span>
-            <span>
+            <span className="reveal">
                 A directed graph is a graph where all the edges are directed from
                 one vertex to another. The order of vertices in
                 the pairs in the edge set matters in this type of
@@ -141,7 +142,7 @@ export default function Background(){
             </span>
             <div className="my-10 flex justify-center reveal">Fig. 3Undirected graph</div>
             <span className="reveal">3{")"} Weighted Graph: </span>
-            <span> A weighted graph is a
+            <span className="reveal"> A weighted graph is a
                 graph where each edge has an associated
                 numerical value, called weight. Weighted
                 graphs may be either directed or undirected.

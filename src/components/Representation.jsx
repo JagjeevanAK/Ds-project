@@ -1,7 +1,20 @@
+import { useEffect } from "react";
+import scrollreveal from "scrollreveal";
+
 export default function Representation(){
+    useEffect(() => {
+        scrollreveal().reveal(".reveal", {
+          origin: "bottom",
+          distance: "50px",
+          duration: 1000,
+          delay: 200,
+          reset: true, 
+        });
+    }, []);
+
     return(
         <div>
-            <div id="GR" className="my-10 text-2xl">Graph Representation</div>
+            <div id="GR" className="reveal my-10 text-2xl">Graph Representation</div>
             <div>
                 Graph is a mathematical structure and finds
                 its applications in various Computer fields.
@@ -13,8 +26,8 @@ export default function Representation(){
                 performed and ease of use. Simple way to
                 represent a graph is using Edge List.
             </div>
-            <div className="mt-6">
-                <span id="EL" className="font-semibold">Edge List: </span>
+            <div className="reveal mt-6">
+                <span id="EL" className="reveal font-semibold">Edge List: </span>
                 <span>
                     This structure simply maintains
                     and stores the vertices and the edges into
@@ -26,7 +39,7 @@ export default function Representation(){
                     a given vertex is inefficient since it requires
                     examining the entire edge sequence. That
                     means -
-                    <ul className="ml-8 list-disc list-inside">
+                    <ul className="reveal ml-8 list-disc list-inside">
                         <li>
                             Difficult to tell how many edges a
                             vertex touches.
@@ -42,9 +55,9 @@ export default function Representation(){
                 </p>
                 <div className="flex justify-center text-2xl font-bold my-8">Code{"(Edge list)"}</div>
             </div>
-            <div>
-                <span id="AL" className="font-semibold">Adjacency List: </span>
-                <span>
+            <div className="reveal">
+                <span id="AL" className="reveal font-semibold">Adjacency List: </span>
+                <span className="reveal">
                     This list structure extends
                     the edge list structure by adding incidence
                     containers to each vertex. Here an array of
@@ -61,7 +74,7 @@ export default function Representation(){
                     stores its incident edges and edge stores its
                     incident vertices.
                 </span>
-                <p>
+                <p className="reveal">
                     Another representation could be maintaining
                     two lists. First list stores indices
                     corresponding to each vertex in the graph and
@@ -72,7 +85,7 @@ export default function Representation(){
                     These lists of all the vertices in the graph
                     would be useful if stored in a hash table.
                 </p>
-                <p>
+                <p className="reveal"> 
                     It is also used to represent a weighted graph.
                     The nodes of linked lists will be storing
                     weights of edges. Each node has precisely as
@@ -86,7 +99,7 @@ export default function Representation(){
                     If a graph has V vertices and E edges then a
                     graph represented using adjacency list will
                     need -
-                    <ul className="list-disc list-inside">
+                    <ul className="reveal list-disc list-inside">
                         <li>
                             V+E node instances for a directed
                             graph
@@ -99,7 +112,7 @@ export default function Representation(){
                     This is generally recommended if it efficiently
                     represents sparse graphs.
                 </p>
-                <p>
+                <p className="reveal">
                     Advantages of using adjacency list are as
                     follows:
                     <ul className="list-disc list-inside">
@@ -120,10 +133,10 @@ export default function Representation(){
                         </li>
                     </ul>
                 </p>
-                <p>
+                <p className="reveal" >
                     Disadvantages of using adjacency list are as
                     follows:
-                    <ul className="list-disc list-inside">
+                    <ul className="reveal list-disc list-inside">
                         <li>
                             Queries like whether there is an edge
                             from vertex u to vertex v are not
@@ -140,12 +153,12 @@ export default function Representation(){
                     Example of adjacency list representation is as
                     shown in Fig. 5.
                 </p>
-                <div className="flex justify-center my-5">Fig. 5. Adjacency List Representation of a given graph C.</div>
-                <div className="flex justify-center text-2xl font-bold my-8">Code(Adjacency List)</div>
+                <div className="reveal flex justify-center my-5">Fig. 5. Adjacency List Representation of a given graph C.</div>
+                <div className="reveal flex justify-center text-2xl font-bold my-8">Code(Adjacency List)</div>
             </div>
-            <div>
-                <span id="AM" className="font-semibold">Adjacency Matrix:</span>
-                <span>
+            <div className="reveal">
+                <span id="AM" className="reveal font-semibold">Adjacency Matrix:</span>
+                <span className="reveal">
                     The adjacency matrix
                     structure augments the edge list structure with
                     a matrix where each row and column
@@ -162,7 +175,7 @@ export default function Representation(){
                     vertices, the dimensions of adjacency matrix
                     will be n*n.
                 </span>
-                <p>
+                <p className="reveal">
                     In the case of directed graphs, suppose if
                     vertex j is adjacent to vertex i then there will
                     be an edge from i to j and vice versa. For a
@@ -172,14 +185,14 @@ export default function Representation(){
                     indicates that there exists an edge from i to j
                     and false indicates no edge exists.
                 </p>
-                <p>
+                <p className="reveal">
                     In case of an undirected graph, the matrix
                     values will be populated with Boolean values.
                     The values of (i, j) and (j, i) are equal which
                     means the adjacency matrix for an undirected
                     graph is always symmetric along the diagonal.
                 </p>
-                <p>
+                <p className="reveal">
                     In a weighted graph, the Boolean values will
                     be the costs of the edges connecting two
                     vertices of a graph. Generally an adjacency
@@ -194,7 +207,7 @@ export default function Representation(){
                     weight of the edge is always a positive
                     number.
                 </p>
-                <p>
+                <p className="reveal" >
                     An adjacency matrix requires an n2 element
                     array so for parse graphs much of the matrix
                     will be empty. Also, for undirected graphs half
@@ -202,11 +215,11 @@ export default function Representation(){
                     these matrices are said to be space
                     inefficient.
                 </p>
-                <p className="my-6">
+                <p className="my-6 reveal">
                     The memory use of an adjacency matrix is
                     O(n2 ) where n = number of vertices.
                 </p>
-                <p>
+                <p className="reveal" >
                     Advantages of using adjacency matrix are as follows:
                     <ul className="list-disc list-inside">
                         <li>
@@ -225,9 +238,9 @@ export default function Representation(){
                         </li>
                     </ul>
                 </p>
-                <p>
+                <p className="reveal">
                     Disadvantages of using adjacency matrix are as follows:
-                    <ul className="list-disc list-inside">
+                    <ul className="reveal list-disc list-inside">
                         <li>
                             Space complexity is of the O(V2 )
                             where V = number of vertices.
@@ -253,21 +266,21 @@ export default function Representation(){
                 <div className="flex justify-center my-6">Fig. 6. Adjacency Matrix Representation of a given Graph</div>
                 <div className="flex justify-center my-6 text-2xl font-semibold">Code(Adjacency Matrix)</div>
             </div>
-            <p>
+            <p className="reveal">
                 Although the linked list representation
                 requires very less memory as compared to
                 the adjacency matrix, the simplicity of the
                 adjacency matrix makes it preferable when
                 graphs are reasonably small.
             </p>
-            <p>
+            <p className="reveal">
                 Adjacency information in an array can be
                 viewed as a function.
-                <ol  className="list-decimal list-inside">
+                <ol  className="reveal list-decimal list-inside">
                     <li>
                         Merits of representing graphs as functions
                         are as follows:
-                        <ul  className="list-disc list-inside">
+                        <ul  className="reveal list-disc list-inside">
                             <li>
                                 Simple and easy to understand.
                             </li>
@@ -277,10 +290,10 @@ export default function Representation(){
                             </li>
                         </ul>
                     </li>
-                    <li>    
+                    <li className="reveal">    
                         Demerits of representing graphs as
                         functions are as follows:
-                        <ul  className="list-disc list-inside">
+                        <ul  className="reveal list-disc list-inside">
                             <li>
                                 Graph must be known statistically at
                                 compile time.
@@ -294,11 +307,11 @@ export default function Representation(){
                     </li>
                 </ol>
             </p>
-            <p>
+            <p className="reveal">
                 One way to overcome the cons of using
                 functions to represent graphs is to use arrays
                 instead.
-                <ol className="list-decimal list-inside">
+                <ol className="reveal list-decimal list-inside">
                     <li>
                         Merits of representing graphs as arrays are
                         as follows:
@@ -312,7 +325,7 @@ export default function Representation(){
                             constructed at runtime.
                         </ul>
                     </li>
-                    <li>
+                    <li className="reveal">
                         Demerits of representing graphs as arrays
                         are as follows:
                         <ul className="list-disc list-inside">
