@@ -9,5 +9,9 @@
 }
 
 .subhead{
-    @apply font-serif font-semibold text-[18px]
+    @apply font-serif font-semibold text-xl
+}
+
+.subh {
+    @apply font-serif font-semibold text-2xl
 }

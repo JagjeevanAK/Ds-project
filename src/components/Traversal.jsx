@@ -38,7 +38,7 @@ export default function Traversal(){
                 </ol>
             </div>
             <div className="mt-14">
-                <div id="bfs" className="reveal subhead mb-2">Breadth First Search:</div>
+                <div id="bfs" className="reveal subh mb-2">Breadth First Search:</div>
                 <div className="reveal">
                     <p>
                     Given an input graph G = (V, E) and a source
@@ -56,7 +56,7 @@ export default function Traversal(){
                     </p>
                 </div>
                 <div className="reveal flex justify-center font-semibold my-8">Fig.7 Implementation of BFS</div>
-                <div className="reveal font-semibold">Algorithm:</div>
+                <div className="mt-6 text-xl font-semibold reveal">Algorithm:</div>
                 <div>
                     <ol className="reveal list-inside list-decimal ml-8">
                         <li>
@@ -87,14 +87,14 @@ export default function Traversal(){
                     </ol>
                 </div>
                 <div>
-                    <div className="reveal my-6 font-semibold">Code:</div>
+                    <div className="flex justify-center mt-6 text-xl font-semibold reveal">Code (BFS):</div>
                     <div className="reveal">
                         <Code codeSnippets={bfs} />
                     </div>
                 </div>
             </div>
             <div className="mt-12">
-                <div id="dfs" className="reveal subhead mb-2">Depth First Search:</div>
+                <div id="dfs" className="reveal subh mb-2">Depth First Search:</div>
                 <div className="reveal">
                     <p>
                         Given an input graph G = (V, E) and a source
@@ -109,7 +109,7 @@ export default function Traversal(){
                     </p>
                     <div className="flex justify-center font-semibold my-7">Fig. 8 Implementation of DFS</div>
                 </div>
-                <div className="reveal font-semibold">Algorithm:</div>
+                <div className="mt-6 text-xl font-semibold reveal">Algorithm:</div>
                 <div>
                     <p>
                         <ol className="reveal list-inside list-decimal ml-8">
@@ -143,7 +143,7 @@ export default function Traversal(){
                     </p>
                 </div>
                 <div>
-                    <div className="reveal my-6 font-semibold">Code:</div>
+                    <div className="flex justify-center mt-6 text-xl font-semibold reveal">Code (DFS):</div>
                     <div className="reveal">
                         <Code codeSnippets={dfs} />
                     </div>

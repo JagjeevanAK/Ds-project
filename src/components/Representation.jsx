@@ -59,8 +59,8 @@ export default function Representation(){
                     for the representation of a graph.
                 </p>
                 <div>
-                    <div className="reveal flex justify-center text-2xl font-bold my-8">
-                        Code{"(Edge list)"}
+                    <div className="flex justify-center mt-6 text-xl font-semibold reveal">
+                        Code{" (Edge list)"}
                     </div>
                     <div className="reveal">
                         <Code codeSnippets={edgelist}/>
@@ -167,7 +167,7 @@ export default function Representation(){
                 </p>
                 <div className="reveal flex justify-center my-5">Fig. 5. Adjacency List Representation of a given graph C.</div>
                 <div>
-                    <div className="reveal flex justify-center text-2xl font-bold my-8">Code(Adjacency List)</div>
+                    <div className="flex justify-center mt-6 text-xl font-semibold reveal">Code (Adjacency List)</div>
                     <div className="reveal">
                         <Code codeSnippets={ad_list}/>
                     </div>
@@ -282,7 +282,7 @@ export default function Representation(){
                 </p>
                 <div className="flex justify-center my-6">Fig. 6. Adjacency Matrix Representation of a given Graph</div>
                 <div>
-                    <div className="flex justify-center my-6 text-2xl font-semibold">Code(Adjacency Matrix)</div>
+                    <div className="flex justify-center mt-6 text-xl font-semibold reveal">Code (Adjacency Matrix)</div>
                     <div className="reveal">
                         <Code codeSnippets={ad_matrix}/>
                     </div>
