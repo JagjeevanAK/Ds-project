@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import scrollreveal from "scrollreveal";
+import Code from "./Code";
 
 export default function Representation(){
     useEffect(() => {
@@ -53,7 +54,14 @@ export default function Representation(){
                     are the two standard and widely used ways
                     for the representation of a graph.
                 </p>
-                <div className="flex justify-center text-2xl font-bold my-8">Code{"(Edge list)"}</div>
+                <div>
+                    <div className="reveal flex justify-center text-2xl font-bold my-8">
+                        Code{"(Edge list)"}
+                    </div>
+                    <div className="reveal">
+                        <Code codeSnippets={edgelist}/>
+                    </div>
+                </div>
             </div>
             <div className="reveal">
                 <span id="AL" className="reveal font-semibold">Adjacency List: </span>
@@ -154,7 +162,12 @@ export default function Representation(){
                     shown in Fig. 5.
                 </p>
                 <div className="reveal flex justify-center my-5">Fig. 5. Adjacency List Representation of a given graph C.</div>
-                <div className="reveal flex justify-center text-2xl font-bold my-8">Code(Adjacency List)</div>
+                <div>
+                    <div className="reveal flex justify-center text-2xl font-bold my-8">Code(Adjacency List)</div>
+                    <div className="reveal">
+                        <Code codeSnippets={ad_list}/>
+                    </div>
+                </div>
             </div>
             <div className="reveal">
                 <span id="AM" className="reveal font-semibold">Adjacency Matrix:</span>
@@ -264,7 +277,12 @@ export default function Representation(){
                     where |E| ~ V 2 .
                 </p>
                 <div className="flex justify-center my-6">Fig. 6. Adjacency Matrix Representation of a given Graph</div>
-                <div className="flex justify-center my-6 text-2xl font-semibold">Code(Adjacency Matrix)</div>
+                <div>
+                    <div className="flex justify-center my-6 text-2xl font-semibold">Code(Adjacency Matrix)</div>
+                    <div className="reveal">
+                        <Code codeSnippets={ad_matrix}/>
+                    </div>
+                </div>
             </div>
             <p className="reveal">
                 Although the linked list representation
@@ -344,4 +362,223 @@ export default function Representation(){
             </p>
         </div>
     )
+}
+
+const edgelist={
+    cpp:`
+        #include <iostream>
+        #include <vector>
+        using namespace std;
+
+        class GraphEdgeList {
+        public:
+            // Constructor initializes an empty vector to store edges
+            GraphEdgeList() {}
+
+            // Add an edge to the list (u, v, weight)
+            void add_edge(int u, int v, int weight = 1) {
+                edges.push_back({u, v, weight});
+            }
+
+            // Display all edges with their weights
+            void display() const {
+                for (const auto& edge : edges) {
+                    cout << "Edge: " << edge[0] << " - " << edge[1] 
+                        << ", Weight: " << edge[2] << endl;
+                }
+            }
+
+        private:
+            vector<vector<int>> edges; // Vector of edges where each edge is represented as {u, v, weight}
+        };
+
+        int main() {
+            GraphEdgeList graph_edge_list;
+            graph_edge_list.add_edge(0, 1);
+            graph_edge_list.add_edge(1, 2);
+            graph_edge_list.add_edge(2, 3);
+            graph_edge_list.add_edge(3, 4);
+            graph_edge_list.add_edge(4, 0);
+            graph_edge_list.display();
+            return 0;
+        }`,
+    python:`
+        class GraphEdgeList:
+            def __init__(self):
+                # Initialize an empty list to store edges
+                self.edges = []
+
+            def add_edge(self, u, v, weight=1):
+                # Add an edge to the list (u, v, weight)
+                self.edges.append((u, v, weight))
+
+            def display(self):
+                # Display all edges with their weights
+                for edge in self.edges:
+                    print(f"Edge: {edge[0]} - {edge[1]}, Weight: {edge[2]}")
+
+        # Example usage
+        graph_edge_list = GraphEdgeList()
+        graph_edge_list.add_edge(0, 1)
+        graph_edge_list.add_edge(1, 2)
+        graph_edge_list.add_edge(2, 3)
+        graph_edge_list.add_edge(3, 4)
+        graph_edge_list.add_edge(4, 0)
+        graph_edge_list.display()
+    `
+}
+
+const ad_list={
+    cpp:`
+    #include <iostream>
+    #include <unordered_map>
+    #include <vector>
+    using namespace std;
+
+    class GraphList {
+    public:
+        GraphList() {}
+
+        void add_edge(int u, int v) {
+            // Add node u if it is not already present
+            if (graph.find(u) == graph.end()) {
+                graph[u] = vector<int>();
+            }
+            // Add node v if it is not already present
+            if (graph.find(v) == graph.end()) {
+                graph[v] = vector<int>();
+            }
+            // Add edge from u to v (undirected)
+            graph[u].push_back(v);
+            graph[v].push_back(u);
+        }
+
+        void display() {
+            // Display the adjacency list
+            for (const auto& pair : graph) {
+                cout << pair.first << ": ";
+                for (int neighbor : pair.second) {
+                    cout << neighbor << " ";
+                }
+                cout << endl;
+            }
+        }
+
+    private:
+        unordered_map<int, vector<int>> graph;
+    };
+
+    int main() {
+        GraphList graph_list;
+        graph_list.add_edge(0, 1);
+        graph_list.add_edge(1, 2);
+        graph_list.add_edge(2, 3);
+        graph_list.add_edge(3, 4);
+        graph_list.add_edge(4, 0);
+        graph_list.display();
+        return 0;
+    }
+    `,
+    python:`
+    class GraphList:
+        def __init__(self):
+            # Initialize an empty dictionary to represent the graph
+            self.graph = {}
+
+        def add_edge(self, u, v):
+            # Add node u if it is not already present
+            if u not in self.graph:
+                self.graph[u] = []
+            # Add node v if it is not already present
+            if v not in self.graph:
+                self.graph[v] = []
+            # Add edge from u to v (undirected)
+            self.graph[u].append(v)
+            self.graph[v].append(u)
+
+        def display(self):
+            # Display the adjacency list
+            for node, neighbours in self.graph.items():
+                print(f"{node}: {neighbours}")
+
+    # Example usage
+    graph_list = GraphList()
+    graph_list.add_edge(0, 1)
+    graph_list.add_edge(1, 2)
+    graph_list.add_edge(2, 3)
+    graph_list.add_edge(3, 4)
+    graph_list.add_edge(4, 0)
+    graph_list.display()`
+}
+
+const ad_matrix={
+    cpp:`
+    #include <iostream>
+    #include <vector>
+    using namespace std;
+
+    class GraphMatrix {
+    public:
+        // Constructor initializes the number of nodes and matrix with zeros
+        GraphMatrix(int num_nodes) : num_nodes(num_nodes), matrix(num_nodes, vector<int>(num_nodes, 0)) {}
+
+        // Add edge to the matrix (undirected)
+        void add_edge(int u, int v, int weight = 1) {
+            matrix[u][v] = weight;
+            matrix[v][u] = weight;
+        }
+
+        // Display the adjacency matrix
+        void display() {
+            for (const auto& row : matrix) {
+                for (int value : row) {
+                    cout << value << " ";
+                }
+                cout << endl;
+            }
+        }
+
+    private:
+        int num_nodes;
+        vector<vector<int>> matrix;
+    };
+
+    int main() {
+        GraphMatrix graph_matrix(5);
+        graph_matrix.add_edge(0, 1);
+        graph_matrix.add_edge(1, 2);
+        graph_matrix.add_edge(2, 3);
+        graph_matrix.add_edge(3, 4);
+        graph_matrix.add_edge(4, 0);
+        graph_matrix.display();
+        return 0;
+    }
+
+    `,
+    python:`
+    class GraphMatrix:
+        def __init__(self, num_nodes):
+            # Initialize the number of nodes and create a matrix with zeros
+            self.num_nodes = num_nodes
+            self.matrix = [[0] * num_nodes for _ in range(num_nodes)]
+
+        def add_edge(self, u, v, weight=1):
+            # Add edge to the matrix (undirected)
+            self.matrix[u][v] = weight
+            self.matrix[v][u] = weight
+
+        def display(self):
+            # Display the adjacency matrix
+            for row in self.matrix:
+                print(row)
+
+    # Example usage
+    graph_matrix = GraphMatrix(5)
+    graph_matrix.add_edge(0, 1)
+    graph_matrix.add_edge(1, 2)
+    graph_matrix.add_edge(2, 3)
+    graph_matrix.add_edge(3, 4)
+    graph_matrix.add_edge(4, 0)
+    graph_matrix.display()
+    `
 }

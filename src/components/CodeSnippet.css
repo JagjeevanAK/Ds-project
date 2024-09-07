@@ -1,0 +1,95 @@
+/* CodeSnippet.css */
+
+/* Container styling */
+.code-snippet-container {
+    margin: 20px 0;
+    text-align: center;
+}
+.language-buttons{
+    display: flex;
+    justify-content:center ;
+}
+.lang-btn {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    margin: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.lang-btn:hover {
+    background-color: #555;
+}
+
+.lang-btn.active {
+    background-color: #666;
+    /* border-bottom: #fff; */
+}
+
+/* Code block styling */
+.code-block {
+    background-color: #1e1e1e;
+    /* Ensure background is not transparent */
+    padding: 10px;
+    border-radius: 20px;
+    overflow-x: auto;
+    text-align: left;
+    width:80%
+    /* Ensure left alignment for code */
+}
+
+/* Code block scrollbar styling for better visibility */
+.code-block::-webkit-scrollbar {
+    height: 6px;
+    background-color: #2e2e2e;
+}
+
+.code-block::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 30px;
+}
+
+.code-actions {
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.code-block-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.floating-copy-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    margin: 2% 12% ;
+    transition: background 0.3s ease;
+}
+
+.floating-copy-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.copy-tooltip {
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    margin-right: 10px;
+}
