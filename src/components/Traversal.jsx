@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import scrollreveal from "scrollreveal";
+import Code from "./Code";
 
 export default function Traversal(){
     useEffect(() => {
@@ -81,7 +82,12 @@ export default function Traversal(){
                         </li>
                     </ol>
                 </div>
-                <div className="reveal my-6 font-semibold">Code:</div>
+                <div>
+                    <div className="reveal my-6 font-semibold">Code:</div>
+                    <div className="reveal">
+                        <Code codeSnippets={bfs} />
+                    </div>
+                </div>
             </div>
             <div>
                 <div id="dfs" className="reveal font-semibold text-2xl">Depth First Search:</div>
@@ -132,8 +138,153 @@ export default function Traversal(){
                         </ol>
                     </p>
                 </div>
-                <div className="reveal my-6 font-semibold">Code:</div>
+                <div>
+                    <div className="reveal my-6 font-semibold">Code:</div>
+                    <div className="reveal">
+                        <Code codeSnippets={dfs} />
+                    </div>
+                </div>
             </div>
         </div>
     )
+}
+
+const bfs={
+    cpp:`
+    #include <iostream>
+    #include <unordered_map>
+    #include <unordered_set>
+    #include <queue>
+    #include <vector>
+    using namespace std;
+
+    // BFS function using a queue
+    unordered_set<int> bfs(const unordered_map<int, vector<int>>& graph, int start_node) {
+        unordered_set<int> visited;
+        queue<int> q;
+        q.push(start_node);
+        
+        while (!q.empty()) {
+            int node = q.front();
+            q.pop();
+            if (visited.find(node) == visited.end()) {
+                cout << node << " ";  // Process the node
+                visited.insert(node);
+                for (int neighbor : graph.at(node)) {
+                    if (visited.find(neighbor) == visited.end()) {
+                        q.push(neighbor);  // Enqueue neighbors
+                    }
+                }
+            }
+        }
+        return visited;
+    }
+
+    int main() {
+        // Example graph representation
+        unordered_map<int, vector<int>> graph = {
+            {0, {1, 4}},
+            {1, {0, 2}},
+            {2, {1, 3}},
+            {3, {2, 4}},
+            {4, {0, 3}}
+        };
+        bfs(graph, 0);
+        return 0;
+    }`,
+    python:`
+    from collections import deque
+
+    def bfs(graph, start_node):
+        visited = set()
+        queue = deque([start_node])
+        
+        while queue:
+            node = queue.popleft()
+            if node not in visited:
+                print(node, end=' ')  # Process the node
+                visited.add(node)
+                queue.extend(neighbor for neighbor in graph[node] if neighbor not in visited)
+        
+        return visited
+
+    # Example usage
+    graph = {
+        0: [1, 4],
+        1: [0, 2],
+        2: [1, 3],
+        3: [2, 4],
+        4: [0, 3]
+    }
+    bfs(graph, 0)`
+}
+
+const dfs={
+    cpp:`
+    #include <iostream>
+    #include <unordered_map>
+    #include <unordered_set>
+    #include <queue>
+    #include <vector>
+    using namespace std;
+
+    // BFS function using a queue
+    unordered_set<int> bfs(const unordered_map<int, vector<int>>& graph, int start_node) {
+        unordered_set<int> visited;
+        queue<int> q;
+        q.push(start_node);
+        
+        while (!q.empty()) {
+            int node = q.front();
+            q.pop();
+            if (visited.find(node) == visited.end()) {
+                cout << node << " ";  // Process the node
+                visited.insert(node);
+                for (int neighbor : graph.at(node)) {
+                    if (visited.find(neighbor) == visited.end()) {
+                        q.push(neighbor);  // Enqueue neighbors
+                    }
+                }
+            }
+        }
+        return visited;
+    }
+
+    int main() {
+        // Example graph representation
+        unordered_map<int, vector<int>> graph = {
+            {0, {1, 4}},
+            {1, {0, 2}},
+            {2, {1, 3}},
+            {3, {2, 4}},
+            {4, {0, 3}}
+        };
+        bfs(graph, 0);
+        return 0;
+    }`,
+    python:`
+    from collections import deque
+
+    def bfs(graph, start_node):
+        visited = set()
+        queue = deque([start_node])
+        
+        while queue:
+            node = queue.popleft()
+            if node not in visited:
+                print(node, end=' ')  # Process the node
+                visited.add(node)
+                queue.extend(neighbor for neighbor in graph[node] if neighbor not in visited)
+        
+        return visited
+
+    # Example usage
+    graph = {
+        0: [1, 4],
+        1: [0, 2],
+        2: [1, 3],
+        3: [2, 4],
+        4: [0, 3]
+    }
+    bfs(graph, 0)`
 }
