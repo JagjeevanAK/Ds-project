@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import scrollreveal from "scrollreveal";
+import './line.css';
 
 export default function Background(){
     useEffect(() => {
@@ -11,10 +12,13 @@ export default function Background(){
           reset: true, 
         });
     }, []);
-    
+
     return(
         <div>
-            <div id="back" className="my-10 text-2xl reveal">Background</div>
+            <div className="base" >
+                <h4 id="back" className="headline reveal">Background</h4>
+                <div className="line reveal"></div>
+            </div>
             <div id="Bg" className="font-semibold reveal">
                 What is a Graph?
             </div>

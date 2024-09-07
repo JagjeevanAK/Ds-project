@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import scrollreveal from "scrollreveal";
+import './line.css';
 
 export default function Referance(){
     useEffect(() => {
@@ -13,7 +14,10 @@ export default function Referance(){
     }, []);
     return(
         <div>
-            <div id="refe" className="reveal my-8 text-2xl font-semibold">Reference</div>
+            <div className="base">
+                <h4 id="refe" className="reveal headline">Reference</h4>
+                <div className="line reveal"></div>
+            </div>
             <div className="reveal">
                 <ol className="list-decimal list-inside">
                     <li>

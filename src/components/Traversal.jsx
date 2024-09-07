@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import scrollreveal from "scrollreveal";
 import Code from "./Code";
+import './line.css';
 
 export default function Traversal(){
     useEffect(() => {
@@ -15,7 +16,10 @@ export default function Traversal(){
 
     return(
         <div>
-            <div id="GT" className="reveal text-2xl my-8 font-semibold">Graph traversal techniques</div>
+            <div className="base">
+                <h4 id="GT" className="reveal headline">Graph Traversal Techniques</h4>
+                <div className="reveal line"></div>
+            </div>
             <div className="reveal">
                 Graph traversal means visiting all the nodes
                 of the graph. A structured system is required

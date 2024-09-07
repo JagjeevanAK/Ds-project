@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import scrollreveal from "scrollreveal";
+import './line.css';
 
 export default function Introduction(){
     useEffect(() => {
@@ -11,7 +12,7 @@ export default function Introduction(){
           reset: true, 
         });
     }, []);
-    
+
     return (
         <div>
             <div>
@@ -32,11 +33,14 @@ export default function Introduction(){
                     </div>
                 </div>
             </div>
-            <div id="Intro" className="pt-10 font-extrabold reveal">
-                Introduction
+            <div className="base">
+                <h4 id="Intro" className="reveal headline">
+                    Introduction
+                </h4>
+                <div className="line reveal "></div>
             </div>
             <div className="reveal">
-                <p className="pt-4">
+                <p className="pt-2">
                     Graph is a data structure that consists of a
                     finite set of vertices, together with a set of
                     unordered pairs of these vertices for an

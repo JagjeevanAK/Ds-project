@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import scrollreveal from "scrollreveal";
 import Code from "./Code";
+import './line.css';
 
 export default function Representation(){
     useEffect(() => {
@@ -15,7 +16,10 @@ export default function Representation(){
 
     return(
         <div>
-            <div id="GR" className="reveal my-10 text-2xl">Graph Representation</div>
+            <div className="base">
+                <h4 id="GR" className="reveal headline">Graph Representation</h4>
+                <div className="line reveal"></div>
+            </div>
             <div className="reveal">
                 Graph is a mathematical structure and finds
                 its applications in various Computer fields.

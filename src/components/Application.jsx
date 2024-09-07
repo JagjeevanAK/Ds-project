@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import scrollreveal from "scrollreveal";
+import './line.css';
 
 export default function Application(){
     useEffect(() => {
@@ -14,8 +15,11 @@ export default function Application(){
 
     return(
         <div>
-            <div id="application" className="reveal text-2xl my-8 font-semibold">
-                Application of Graphs
+            <div className="base">
+                <h4 id="application" className="reveal headline">
+                    Application of Graphs
+                </h4>
+                <div className="line reveal"></div>
             </div>
             <div>
                 <ul className=" list-disc list-inside">

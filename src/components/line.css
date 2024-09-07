@@ -1,0 +1,9 @@
+.line {
+    @apply bg-white w-[100%] rounded-[10px] mb-6 h-1
+}
+.base{
+    @apply flex items-baseline h-[100%] font-semibold text-3xl
+}
+.headline {
+    @apply pt-10 pb-0
+}

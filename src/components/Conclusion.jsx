@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import scrollreveal from "scrollreveal";
+import './line.css';
 
 export default function Conclusion(){
     useEffect(() => {
@@ -14,7 +15,10 @@ export default function Conclusion(){
 
     return(
         <div>
-            <div id="conclusion" className="reveal text-2xl font-semibold my-8">Conclusion</div>
+            <div className="base">
+                <h4 id="conclusion" className="reveal headline">Conclusion</h4>
+                <div className="reveal line"></div>
+            </div>
             <div className="reveal">
                 Graphs are a commonly used data structure
                 because they can be used to model many
