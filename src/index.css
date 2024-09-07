@@ -28,4 +28,7 @@ p,div {
 span,ul {
   text-align: justify;
 }
-  
+
+.line{
+  @apply bg-white w-[100%] rounded-[10px] mb-6 h-1
+}
