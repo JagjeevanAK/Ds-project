@@ -19,7 +19,7 @@ export default function Referance(){
                 <div className="line reveal"></div>
             </div>
             <div className="reveal">
-                <ol className="list-decimal list-inside">
+                <ol className="list-decimal list-inside ml-4">
                     <li>
                         IJARCCE
                     </li>

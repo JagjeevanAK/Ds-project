@@ -86,7 +86,7 @@ export default function Representation(){
                     stores its incident edges and edge stores its
                     incident vertices.
                 </span>
-                <p className="reveal">
+                <p className="reveal pt-4">
                     Another representation could be maintaining
                     two lists. First list stores indices
                     corresponding to each vertex in the graph and
@@ -174,7 +174,7 @@ export default function Representation(){
                 </div>
             </div>
             <div className="reveal mt-12">
-                <span id="AM" className="reveal subhead">Adjacency Matrix:</span>
+                <span id="AM" className="reveal subhead">Adjacency Matrix: </span>
                 <span className="reveal">
                     The adjacency matrix
                     structure augments the edge list structure with
@@ -192,7 +192,7 @@ export default function Representation(){
                     vertices, the dimensions of adjacency matrix
                     will be n*n.
                 </span>
-                <p className="reveal">
+                <p className="reveal pt-6">
                     In the case of directed graphs, suppose if
                     vertex j is adjacent to vertex i then there will
                     be an edge from i to j and vice versa. For a
@@ -202,14 +202,14 @@ export default function Representation(){
                     indicates that there exists an edge from i to j
                     and false indicates no edge exists.
                 </p>
-                <p className="reveal">
+                <p className="reveal pt-6">
                     In case of an undirected graph, the matrix
                     values will be populated with Boolean values.
                     The values of (i, j) and (j, i) are equal which
                     means the adjacency matrix for an undirected
                     graph is always symmetric along the diagonal.
                 </p>
-                <p className="reveal">
+                <p className="reveal pt-6">
                     In a weighted graph, the Boolean values will
                     be the costs of the edges connecting two
                     vertices of a graph. Generally an adjacency
@@ -224,7 +224,7 @@ export default function Representation(){
                     weight of the edge is always a positive
                     number.
                 </p>
-                <p className="reveal" >
+                <p className="reveal pt-6" >
                     An adjacency matrix requires an n2 element
                     array so for parse graphs much of the matrix
                     will be empty. Also, for undirected graphs half

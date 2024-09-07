@@ -22,7 +22,7 @@ export default function Application(){
                 <div className="line reveal"></div>
             </div>
             <div>
-                <ul className=" list-disc list-inside">
+                <ul className=" list-disc list-inside ml-4">
                     <li className="reveal">
                         In road networks, we can consider the
                         intersections as vertices and the road
@@ -35,7 +35,7 @@ export default function Application(){
                         patterns, traffic light timings and many
                         aspects of transportation.
                     </li>
-                    <li className="reveal">
+                    <li className="reveal pt-4">
                         Directed graphs can be used to map
                         the links between pages within a
                         website. In this case each web page is
@@ -44,7 +44,7 @@ export default function Application(){
                         used to analyse ease of navigation
                         between different parts of the site.
                     </li>
-                    <li className="reveal">
+                    <li className="reveal pt-4">
                         In the case of power grid and water
                         network, vertices represent connection
                         points and edges represent the wires
@@ -53,14 +53,14 @@ export default function Application(){
                         infrastructure that matches the
                         required demands.
                     </li>
-                    <li className="reveal">
+                    <li className="reveal pt-4">
                         Scene graphs represent the logical or
                         spatial relationships between objects
                         in a scene. Scene graphs are widely
                         used in the graphics and computer
                         games industry.
                     </li>
-                    <li className="reveal">
+                    <li className="reveal pt-4">
                         Graph theory is also widely used in
                         sociology as a way, for example, to
                         measure actors' prestige or to explore
@@ -68,7 +68,7 @@ export default function Application(){
                         use of social network analysis
                         software.
                     </li>
-                    <li className="reveal">
+                    <li className="reveal pt-4">
                         A common problem in AI is to find
                         some goal that satisfies a list of
                         constraints. For example, for a

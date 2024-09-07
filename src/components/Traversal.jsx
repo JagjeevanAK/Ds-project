@@ -58,7 +58,7 @@ export default function Traversal(){
                 <div className="reveal flex justify-center font-semibold my-8">Fig.7 Implementation of BFS</div>
                 <div className="reveal font-semibold">Algorithm:</div>
                 <div>
-                    <ol className="reveal list-inside list-decimal">
+                    <ol className="reveal list-inside list-decimal ml-8">
                         <li>
                             Input the vertices of the graph and its
                             edges G = (V, E)
@@ -112,7 +112,7 @@ export default function Traversal(){
                 <div className="reveal font-semibold">Algorithm:</div>
                 <div>
                     <p>
-                        <ol className="reveal list-inside list-decimal">
+                        <ol className="reveal list-inside list-decimal ml-8">
                             <li>
                                 Input the vertices and edges of the graph G = (V, E).
                             </li>
