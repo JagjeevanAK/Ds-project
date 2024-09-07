@@ -19,3 +19,8 @@
 .fig{
     @apply text-lg mt-4 mb-6 flex justify-center font-semibold
 }
+
+.figure{
+    @apply flex justify-center
+}
+

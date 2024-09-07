@@ -35,3 +35,6 @@ span,ul {
   text-align: justify;
 }
 
+img {
+  mix-blend-mode: multiply;
+}

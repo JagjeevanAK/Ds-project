@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import scrollreveal from "scrollreveal";
 import Code from "./Code";
 import './line.css';
+import AdjacencyList from "./fig/Al";
 
 export default function Representation(){
     useEffect(() => {
@@ -165,7 +166,12 @@ export default function Representation(){
                     Example of adjacency list representation is as
                     shown in Fig. 5.
                 </p>
-                <div className="reveal fig">Fig. 5. Adjacency List Representation of a given graph C.</div>
+                <div className="flex justify-center my-8"> 
+                    <div className="rounded-xl reveal bg-[#F5F5F5] px-4 w-[50%]" >
+                        <img src="public/Graph_Adjacency_List-removebg.png" alt="Adjacency List" />
+                        <div className="reveal text-black fig">Fig. 6. Adjacency List Representation of a given graph C.</div>
+                    </div>
+                </div>
                 <div>
                     <div className="flex justify-center mt-6 text-xl font-semibold reveal">Code (Adjacency List)</div>
                     <div className="reveal">
@@ -280,7 +286,12 @@ export default function Representation(){
                     This is preferred if the graph is of dense type
                     where |E| ~ V 2 .
                 </p>
-                <div className="reveal fig">Fig. 6. Adjacency Matrix Representation of a given Graph</div>
+                <div className="flex justify-center my-8"> 
+                    <div className="reveal rounded-xl bg-[#F5F5F5] px-4 w-[50%]" >
+                        <img src="public/al-removebg-preview.png" alt="Adjacency Matrix " />
+                        <div className="reveal text-black fig">Fig. 6. Adjacency Matrix Representation of a given graph C.</div>
+                    </div>
+                </div>
                 <div>
                     <div className="flex justify-center mt-6 text-xl font-semibold reveal">Code (Adjacency Matrix)</div>
                     <div className="reveal">

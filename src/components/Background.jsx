@@ -1,6 +1,10 @@
 import { useEffect } from "react";
 import scrollreveal from "scrollreveal";
 import './line.css';
+import Graph from "./fig/grapheg";
+import Directed from "./fig/directedg";
+import Undirected from "./fig/undirectedg";
+import Weighted from "./fig/Weighted";
 
 export default function Background(){
     useEffect(() => {
@@ -44,6 +48,9 @@ export default function Background(){
                     V = {"{a, b, c, d, e}"} <br />
                     E = {"{ab, ac, bd, cd, de}"}
                 </p>
+                <div className="figure" >
+                    <Graph/>
+                </div>
                 <p className="reveal fig">Fig.1 Graph Structure</p>
                 <p className="pt-4 reveal">
                     <span className="font-semibold">Adjacency relation: </span> Node B is adjacent to A if
@@ -135,17 +142,23 @@ export default function Background(){
                 a vertex to itself. Example of a directed graph
                 is shown in Fig. 2.
             </span>
+            <div className="figure">
+                <Directed/>
+            </div>
             <div className="fig reveal">Fig. 2 Directed graph</div>
             <span className="reveal font-semibold">2{")"} Undirected Graph: </span>
             <span className="reveal">
                 A directed graph is a
                 graph where all the edges are bidirectional.
                 The order of vertices in the pairs in the edge
-                set doesn‟t matter in this type of graph. In
+                set doesn't matter in this type of graph. In
                 undirected graphs edges are drawn as
                 straight lines. Example of an undirected graph
                 is shown in Fig.
             </span>
+            <div className="figure">
+                <Undirected/>
+            </div>
             <div className="fig reveal">Fig. 3Undirected graph</div>
             <span className="reveal font-semibold">3{")"} Weighted Graph: </span>
             <span className="reveal"> A weighted graph is a
@@ -156,6 +169,9 @@ export default function Background(){
                 the “cost” of the edge. Example of a weighted
                 graph is shown in Fig. 4.
             </span>
+            <div className="figure">
+                <Weighted/>
+            </div>
             <div className="fig reveal">Fig. 4 Weighted graph</div>
             <span className="reveal font-semibold">4{")"} Space Graphs and Dense Graphs: </span>
             <span className="reveal">
