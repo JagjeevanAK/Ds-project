@@ -19,7 +19,7 @@ export default function Background(){
                 <h4 id="back" className="headline reveal">Background</h4>
                 <div className="line reveal"></div>
             </div>
-            <div id="Bg" className="font-semibold reveal">
+            <div id="Bg" className="subhead reveal">
                 What is a Graph?
             </div>
             <div className="reveal">
@@ -55,10 +55,10 @@ export default function Background(){
                     there is a path from A to B.
                 </p>
             </div>
-            <div id="BO" className="font-semibold reveal">
+            <div id="BO" className="subhead mt-8 reveal">
                 Graph Operations
             </div>
-            <div className="pt-4 reveal">
+            <div className="pt-2 reveal">
                 The basic primary operations provided by a
                 graph data structure are as follows:
                 <ul className="reveal pt-4 ml-8 list-disc list-inside">
@@ -117,7 +117,7 @@ export default function Background(){
                     </li>
                 </ul>
             </div>
-            <div id="Bgr" className="font-semibold my-5 reveal">Types of Graphs :</div>
+            <div id="Bgr" className="subhead mt-8 mb-2 reveal">Types of Graphs :</div>
             <span className="reveal">1{")"} Directed Graph: </span>
             <span className="reveal">
                 A directed graph is a graph where all the edges are directed from

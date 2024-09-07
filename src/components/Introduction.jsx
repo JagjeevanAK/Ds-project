@@ -17,7 +17,7 @@ export default function Introduction(){
         <div>
             <div>
                 <div className="reveal">
-                    <span id="abs" className="font-bold">Abstract:</span>
+                    <span id="abs" className="subhead">Abstract: </span>
                     <span>
                         Graphs are a fundamental data structure in the world of programming. Graphs are used
                         as a mean to store and analyse metadata. A graph implementation needs understanding of some of
@@ -26,9 +26,7 @@ export default function Introduction(){
                         An overview of the advantages, disadvantages and applications of the graphs is also provided.
                     </span>
                     <div className="pt-4 ">
-                        <span className="font-bold">
-                            Keyword:
-                        </span>
+                        <span className="subhead">Keyword: </span>
                         <span>Graph, Vertices, Edges, Directed, Undirected, Adjacency, Complexity.</span>
                     </div>
                 </div>

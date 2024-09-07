@@ -37,8 +37,8 @@ export default function Traversal(){
                     </li>
                 </ol>
             </div>
-            <div>
-                <div id="bfs" className="reveal font-semibold">Breadth First Search:</div>
+            <div className="mt-14">
+                <div id="bfs" className="reveal subhead mb-2">Breadth First Search:</div>
                 <div className="reveal">
                     <p>
                     Given an input graph G = (V, E) and a source
@@ -93,8 +93,8 @@ export default function Traversal(){
                     </div>
                 </div>
             </div>
-            <div>
-                <div id="dfs" className="reveal font-semibold text-2xl">Depth First Search:</div>
+            <div className="mt-12">
+                <div id="dfs" className="reveal subhead mb-2">Depth First Search:</div>
                 <div className="reveal">
                     <p>
                         Given an input graph G = (V, E) and a source

@@ -31,8 +31,8 @@ export default function Representation(){
                 performed and ease of use. Simple way to
                 represent a graph is using Edge List.
             </div>
-            <div className="reveal mt-6">
-                <span id="EL" className="reveal font-semibold">Edge List: </span>
+            <div className="reveal mt-8">
+                <span id="EL" className="reveal subhead">Edge List: </span>
                 <span>
                     This structure simply maintains
                     and stores the vertices and the edges into
@@ -67,8 +67,8 @@ export default function Representation(){
                     </div>
                 </div>
             </div>
-            <div className="reveal">
-                <span id="AL" className="reveal font-semibold">Adjacency List: </span>
+            <div className="reveal mt-12">
+                <span id="AL" className="reveal subhead ">Adjacency List: </span>
                 <span className="reveal">
                     This list structure extends
                     the edge list structure by adding incidence
@@ -173,8 +173,8 @@ export default function Representation(){
                     </div>
                 </div>
             </div>
-            <div className="reveal">
-                <span id="AM" className="reveal font-semibold">Adjacency Matrix:</span>
+            <div className="reveal mt-12">
+                <span id="AM" className="reveal subhead">Adjacency Matrix:</span>
                 <span className="reveal">
                     The adjacency matrix
                     structure augments the edge list structure with
