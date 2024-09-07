@@ -168,7 +168,7 @@ export default function Representation(){
                 </p>
                 <div className="flex justify-center my-8"> 
                     <div className="rounded-xl reveal bg-[#F5F5F5] px-4 w-[50%]" >
-                        <img src="public/Graph_Adjacency_List-removebg.png" alt="Adjacency List" />
+                        <img src="/Graph_Adjacency_List-removebg.png" alt="Adjacency List" />
                         <div className="reveal text-black fig">Fig. 6. Adjacency List Representation of a given graph C.</div>
                     </div>
                 </div>
@@ -288,7 +288,7 @@ export default function Representation(){
                 </p>
                 <div className="flex justify-center my-8"> 
                     <div className="reveal rounded-xl bg-[#F5F5F5] px-4 w-[50%]" >
-                        <img src="public/al-removebg-preview.png" alt="Adjacency Matrix " />
+                        <img src="/al-removebg-preview.png" alt="Adjacency Matrix " />
                         <div className="reveal text-black fig">Fig. 6. Adjacency Matrix Representation of a given graph C.</div>
                     </div>
                 </div>
