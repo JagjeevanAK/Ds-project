@@ -26,7 +26,7 @@ export default function Traversal(){
                 by many applications of graphs to examine
                 the vertices and edges of a graph.
             </div>
-            <div className="reveal">
+            <div className="reveal mt-4">
                 There are two graph traversal methods as follows:
                 <ol className="list-decimal list-inside">
                     <li>

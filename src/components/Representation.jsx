@@ -39,12 +39,12 @@ export default function Representation(){
                     unsorted sequences. Advantage: Easy to
                     implement and iterate over small edges.
                 </span>
-                <p>
+                <p className="mt-6">
                     Disadvantage: Finding the edges incident on
                     a given vertex is inefficient since it requires
                     examining the entire edge sequence. That
                     means -
-                    <ul className="reveal ml-8 list-disc list-inside">
+                    <ul className="reveal ml-6 list-disc list-inside mb-4">
                         <li>
                             Difficult to tell how many edges a
                             vertex touches.
@@ -107,11 +107,11 @@ export default function Representation(){
                     You would not store more information than
                     actually required.
                 </p>
-                <p>
+                <p className="mt-6">
                     If a graph has V vertices and E edges then a
                     graph represented using adjacency list will
                     need -
-                    <ul className="reveal list-disc list-inside">
+                    <ul className="reveal list-disc list-inside ml-4 mb-6">
                         <li>
                             V+E node instances for a directed
                             graph
@@ -124,10 +124,10 @@ export default function Representation(){
                     This is generally recommended if it efficiently
                     represents sparse graphs.
                 </p>
-                <p className="reveal">
+                <p className="reveal mt-4">
                     Advantages of using adjacency list are as
                     follows:
-                    <ul className="list-disc list-inside">
+                    <ul className="list-disc list-inside ml-4 mb-4">
                         <li>
                             Addition of a vertex and connecting
                             new vertices with the existing ones is
@@ -148,7 +148,7 @@ export default function Representation(){
                 <p className="reveal" >
                     Disadvantages of using adjacency list are as
                     follows:
-                    <ul className="reveal list-disc list-inside">
+                    <ul className="reveal list-disc list-inside ml-4 mb-4">
                         <li>
                             Queries like whether there is an edge
                             from vertex u to vertex v are not
@@ -236,9 +236,9 @@ export default function Representation(){
                     The memory use of an adjacency matrix is
                     O(n2 ) where n = number of vertices.
                 </p>
-                <p className="reveal" >
+                <p className="reveal mt-4" >
                     Advantages of using adjacency matrix are as follows:
-                    <ul className="list-disc list-inside">
+                    <ul className="list-disc list-inside ml-4">
                         <li>
                             Easy to understand, implement and
                             convenient to work with.
@@ -255,9 +255,9 @@ export default function Representation(){
                         </li>
                     </ul>
                 </p>
-                <p className="reveal">
+                <p className="reveal my-4">
                     Disadvantages of using adjacency matrix are as follows:
-                    <ul className="reveal list-disc list-inside">
+                    <ul className="reveal list-disc list-inside ml-4 mb-4">
                         <li>
                             Space complexity is of the O(V2 )
                             where V = number of vertices.
@@ -295,14 +295,14 @@ export default function Representation(){
                 adjacency matrix makes it preferable when
                 graphs are reasonably small.
             </p>
-            <p className="reveal">
+            <p className="reveal mt-4">
                 Adjacency information in an array can be
                 viewed as a function.
-                <ol  className="reveal list-decimal list-inside">
+                <ol  className="reveal list-decimal list-inside ml-2">
                     <li>
                         Merits of representing graphs as functions
                         are as follows:
-                        <ul  className="reveal list-disc list-inside">
+                        <ul  className="reveal list-disc list-inside ml-4">
                             <li>
                                 Simple and easy to understand.
                             </li>
@@ -315,7 +315,7 @@ export default function Representation(){
                     <li className="reveal">    
                         Demerits of representing graphs as
                         functions are as follows:
-                        <ul  className="reveal list-disc list-inside">
+                        <ul  className="reveal list-disc list-inside ml-4">
                             <li>
                                 Graph must be known statistically at
                                 compile time.
@@ -329,28 +329,30 @@ export default function Representation(){
                     </li>
                 </ol>
             </p>
-            <p className="reveal">
+            <p className="reveal mt-4">
                 One way to overcome the cons of using
                 functions to represent graphs is to use arrays
                 instead.
-                <ol className="reveal list-decimal list-inside">
+                <ol className="reveal list-decimal list-inside ml-2">
                     <li>
                         Merits of representing graphs as arrays are
                         as follows:
-                        <ul className="list-disc list-inside">
-                            Simple and easy to understand and
-                            easily adaptable to different types of
-                            graphs.
-                        </ul>
-                        <ul>
-                            Can be accessed efficiently and
-                            constructed at runtime.
+                        <ul className=" reveal list-disc list-inside ml-4">
+                            <li>
+                                Simple and easy to understand and
+                                easily adaptable to different types of
+                                graphs.
+                            </li>
+                            <li>
+                                Can be accessed efficiently and
+                                constructed at runtime.
+                            </li>
                         </ul>
                     </li>
                     <li className="reveal">
                         Demerits of representing graphs as arrays
                         are as follows:
-                        <ul className="list-disc list-inside">
+                        <ul className="list-disc list-inside ml-4">
                             <li>
                                 The domain of Vertices must be a type
                                 that can be used as an index into an
