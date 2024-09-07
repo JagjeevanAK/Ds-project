@@ -16,14 +16,16 @@ body {
 }
 
 /* Apply Montserrat for headings */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1,h2,h3,h4,h5,h6 {
   font-family: 'Montserrat', sans-serif;
   color: #ffffff;
   /* Example color for headings */
+}
+
+p,div {
+  text-align: justify;
+}
+span,ul {
+  text-align: justify;
 }
   
