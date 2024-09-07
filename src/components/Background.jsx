@@ -44,7 +44,7 @@ export default function Background(){
                     V = {"{a, b, c, d, e}"} <br />
                     E = {"{ab, ac, bd, cd, de}"}
                 </p>
-                <p className="flex justify-center mt-10">Fig.1 Graph Structure</p>
+                <p className="reveal fig">Fig.1 Graph Structure</p>
                 <p className="pt-4 reveal">
                     <span className="font-semibold">Adjacency relation: </span> Node B is adjacent to A if
                     there is an edge from A to B. <br />
@@ -135,7 +135,7 @@ export default function Background(){
                 a vertex to itself. Example of a directed graph
                 is shown in Fig. 2.
             </span>
-            <div className="flex justify-center my-10 reveal">Fig. 2 Directed graph</div>
+            <div className="fig reveal">Fig. 2 Directed graph</div>
             <span className="reveal font-semibold">2{")"} Undirected Graph: </span>
             <span className="reveal">
                 A directed graph is a
@@ -146,7 +146,7 @@ export default function Background(){
                 straight lines. Example of an undirected graph
                 is shown in Fig.
             </span>
-            <div className="my-10 flex justify-center reveal">Fig. 3Undirected graph</div>
+            <div className="fig reveal">Fig. 3Undirected graph</div>
             <span className="reveal font-semibold">3{")"} Weighted Graph: </span>
             <span className="reveal"> A weighted graph is a
                 graph where each edge has an associated
@@ -156,7 +156,7 @@ export default function Background(){
                 the “cost” of the edge. Example of a weighted
                 graph is shown in Fig. 4.
             </span>
-            <div className="my-10 flex justify-center reveal">Fig. 4 Weighted graph</div>
+            <div className="fig reveal">Fig. 4 Weighted graph</div>
             <span className="reveal font-semibold">4{")"} Space Graphs and Dense Graphs: </span>
             <span className="reveal">
                 Consider a graph having n nodes. A graph is

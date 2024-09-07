@@ -165,7 +165,7 @@ export default function Representation(){
                     Example of adjacency list representation is as
                     shown in Fig. 5.
                 </p>
-                <div className="reveal flex justify-center my-5">Fig. 5. Adjacency List Representation of a given graph C.</div>
+                <div className="reveal fig">Fig. 5. Adjacency List Representation of a given graph C.</div>
                 <div>
                     <div className="flex justify-center mt-6 text-xl font-semibold reveal">Code (Adjacency List)</div>
                     <div className="reveal">
@@ -280,7 +280,7 @@ export default function Representation(){
                     This is preferred if the graph is of dense type
                     where |E| ~ V 2 .
                 </p>
-                <div className="flex justify-center my-6">Fig. 6. Adjacency Matrix Representation of a given Graph</div>
+                <div className="reveal fig">Fig. 6. Adjacency Matrix Representation of a given Graph</div>
                 <div>
                     <div className="flex justify-center mt-6 text-xl font-semibold reveal">Code (Adjacency Matrix)</div>
                     <div className="reveal">
