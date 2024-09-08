@@ -68,7 +68,7 @@ export default function Representation(){
                     </div>
                 </div>
             </div>
-            <div className="reveal mt-12">
+            <div className="mt-12">
                 <span id="AL" className="reveal subhead ">Adjacency List: </span>
                 <span className="reveal">
                     This list structure extends
@@ -108,7 +108,7 @@ export default function Representation(){
                     You would not store more information than
                     actually required.
                 </p>
-                <p className="mt-6">
+                <p className="mt-6 reveal">
                     If a graph has V vertices and E edges then a
                     graph represented using adjacency list will
                     need -
@@ -179,7 +179,7 @@ export default function Representation(){
                     </div>
                 </div>
             </div>
-            <div className="reveal mt-12">
+            <div className="mt-12">
                 <span id="AM" className="reveal subhead">Adjacency Matrix: </span>
                 <span className="reveal">
                     The adjacency matrix
