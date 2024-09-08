@@ -25,8 +25,8 @@ export default function Background(){
             <div id="Bg" className="subhead reveal">
                 What is a Graph?
             </div>
-            <div className="reveal pt-4">
-                <p>
+            <div className="pt-4">
+                <p className="reveal">
                     Graph is a pictorial representation of a set of
                     objects, where the object pairs are connected
                     by links. The interconnected objects are called
@@ -68,9 +68,11 @@ export default function Background(){
             <div id="BO" className="subhead mt-8 reveal">
                 Graph Operations
             </div>
-            <div className="pt-2 reveal">
-                The basic primary operations provided by a
-                graph data structure are as follows:
+            <div className="pt-2">
+                <div className="reveal">
+                    The basic primary operations provided by a
+                    graph data structure are as follows:
+                </div>
                 <ul className="reveal pt-4 ml-8 list-disc list-inside">
                     <li>
                         Addition of a vertex: adding a vertex to

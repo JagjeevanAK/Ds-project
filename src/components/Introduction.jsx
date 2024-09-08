@@ -37,8 +37,8 @@ export default function Introduction(){
                 </h4>
                 <div className="line reveal "></div>
             </div>
-            <div className="reveal">
-                <p className="pt-2">
+            <div>
+                <p className="pt-2 reveal">
                     Graph is a data structure that consists of a
                     finite set of vertices, together with a set of
                     unordered pairs of these vertices for an
@@ -53,7 +53,7 @@ export default function Introduction(){
                     the vertices externally also with the help of
                     integer indices or references.
                 </p>
-                <p className="py-4">
+                <p className="py-4 reveal">
                     Graphs are very important in the field of
                     computer science. They are used to model
                     real world systems such as the Internet where

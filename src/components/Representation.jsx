@@ -32,15 +32,15 @@ export default function Representation(){
                 performed and ease of use. Simple way to
                 represent a graph is using Edge List.
             </div>
-            <div className="reveal mt-8">
+            <div className="mt-8">
                 <span id="EL" className="reveal subhead">Edge List: </span>
-                <span>
+                <span className="reveal">
                     This structure simply maintains
                     and stores the vertices and the edges into
                     unsorted sequences. Advantage: Easy to
                     implement and iterate over small edges.
                 </span>
-                <p className="mt-6">
+                <p className="mt-6 reveal">
                     Disadvantage: Finding the edges incident on
                     a given vertex is inefficient since it requires
                     examining the entire edge sequence. That
