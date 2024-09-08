@@ -17,7 +17,6 @@ export default function Content(){
             <Traversal/>
             <Application/>
             <Example/>
-            {/* <Imp/> */}
             <Conclusion/>
             <Referance/>
         </div>
