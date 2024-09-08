@@ -179,7 +179,7 @@ export default function Representation(){
                     </div>
                 </div>
             </div>
-            <div className="mt-12">
+            <div className="mt-12 reveal">
                 <span id="AM" className="reveal subhead">Adjacency Matrix: </span>
                 <span className="reveal">
                     The adjacency matrix
