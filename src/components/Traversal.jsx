@@ -37,32 +37,32 @@ export default function Traversal(){
                     </li>
                 </ol>
             </div>
-            <div className="reveal">
-                <div className="mt-14">
-                    <div id="bfs" className="reveal subh mb-2">Breadth First Search:</div>
-                    <div className="reveal">
-                        <p>
-                        Given an input graph G = (V, E) and a source
-                        vertex S, from where the searching starts. We
-                        mark the vertex S as visited and then visit all
-                        of its adjacent nodes. Now one of the adjacent
-                        nodes is selected for exploration. The
-                        procedure is repeated until all the nodes are
-                        visited. Thus, BFS systematically traverses
-                        the edges of G to explore every vertex that is
-                        reachable from S. A queue is used to keep a
-                        track of the progress of traversing the
-                        neighbour nodes. Implementation of BFS is as
-                        shown in Fig. 7.
-                        </p>
-                    </div>
-                    <div className="flex justify-center my-8"> 
-                        <div className="reveal rounded-xl bg-[#F5F5F5] px-4 w-[50%]" >
-                            <img src="/bfs-removebg-preview.png" alt="Implementation of BFS" />
-                            <div className="reveal text-black fig">Fig.7 Implementation of BFS</div>
-                        </div>
+            <div className="mt-14">
+                <div id="bfs" className="reveal subh mb-2">Breadth First Search:</div>
+                <div className="reveal">
+                    <p>
+                    Given an input graph G = (V, E) and a source
+                    vertex S, from where the searching starts. We
+                    mark the vertex S as visited and then visit all
+                    of its adjacent nodes. Now one of the adjacent
+                    nodes is selected for exploration. The
+                    procedure is repeated until all the nodes are
+                    visited. Thus, BFS systematically traverses
+                    the edges of G to explore every vertex that is
+                    reachable from S. A queue is used to keep a
+                    track of the progress of traversing the
+                    neighbour nodes. Implementation of BFS is as
+                    shown in Fig. 7.
+                    </p>
                 </div>
-
+                <div className="flex justify-center my-8"> 
+                    <div className="reveal rounded-xl bg-[#F5F5F5] px-4 w-[50%]" >
+                        <img src="/bfs-removebg-preview.png" alt="Implementation of BFS" />
+                        <div className="reveal text-black fig">Fig.7 Implementation of BFS</div>
+                    </div>
+                </div>
+                <div>
+                    
                 </div>
                 <div className="mt-6 text-xl font-semibold reveal">Algorithm:</div>
                 <div>
