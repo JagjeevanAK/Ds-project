@@ -121,36 +121,34 @@ export default function Traversal(){
                 </div>
                 <div className="mt-6 text-xl font-semibold reveal">Algorithm:</div>
                 <div>
-                    <p>
-                        <ol className="reveal list-inside list-decimal ml-8">
-                            <li>
-                                Input the vertices and edges of the graph G = (V, E).
-                            </li>
-                            <li>
-                                Input the source vertex and assign it to the
-                                variable S.
-                            </li>
-                            <li>
-                                Push the source vertex to the stack.
-                            </li>
-                            <li>
-                                Repeat the steps 5 and 6 until the stack is
-                                empty.
-                            </li>
-                            <li>
-                                Pop the top element of the stack and mark
-                                it is visited.
-                            </li>
-                            <li>
-                                Push the vertices which are neighbours to
-                                just popped elements, if it is not in the stack
-                                and is not visited.
-                            </li>
-                            <li>
-                                Exit.
-                            </li>
-                        </ol>
-                    </p>
+                    <ol className="reveal list-inside list-decimal ml-8">
+                        <li>
+                            Input the vertices and edges of the graph G = (V, E).
+                        </li>
+                        <li>
+                            Input the source vertex and assign it to the
+                            variable S.
+                        </li>
+                        <li>
+                            Push the source vertex to the stack.
+                        </li>
+                        <li>
+                            Repeat the steps 5 and 6 until the stack is
+                            empty.
+                        </li>
+                        <li>
+                            Pop the top element of the stack and mark
+                            it is visited.
+                        </li>
+                        <li>
+                            Push the vertices which are neighbours to
+                            just popped elements, if it is not in the stack
+                            and is not visited.
+                        </li>
+                        <li>
+                            Exit.
+                        </li>
+                    </ol>
                 </div>
                 <div>
                     <div className="flex justify-center mt-6 text-xl font-semibold reveal">Code (DFS):</div>
