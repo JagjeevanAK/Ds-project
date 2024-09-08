@@ -55,7 +55,12 @@ export default function Traversal(){
                     shown in Fig. 7.
                     </p>
                 </div>
-                <div className="reveal fig">Fig.7 Implementation of BFS</div>
+                <div className="flex justify-center my-8"> 
+                    <div className="reveal rounded-xl bg-[#F5F5F5] px-4 w-[50%]" >
+                        <img src="/bfs-removebg-preview.png" alt="Implementation of BFS" />
+                        <div className="reveal text-black fig">Fig.7 Implementation of BFS</div>
+                    </div>
+                </div>
                 <div className="mt-6 text-xl font-semibold reveal">Algorithm:</div>
                 <div>
                     <ol className="reveal list-inside list-decimal ml-8">
@@ -107,7 +112,12 @@ export default function Traversal(){
                         implementation of DFS. Implementation of
                         DFS is as shown in Fig. 8.
                     </p>
-                    <div className="fig reveal">Fig. 8 Implementation of DFS</div>
+                    <div className="flex justify-center my-8"> 
+                        <div className="reveal rounded-xl bg-[#F5F5F5] px-4 w-[50%]" >
+                            <img src="/DFS-Algorithm-removebg-preview.png" alt="Implementation of DFS" />
+                            <div className="reveal text-black fig">Fig. 8 Implementation of DFS</div>
+                        </div>
+                    </div>
                 </div>
                 <div className="mt-6 text-xl font-semibold reveal">Algorithm:</div>
                 <div>

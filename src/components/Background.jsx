@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import scrollreveal from "scrollreveal";
 import './line.css';
-import Graph from "./fig/grapheg";
 import Directed from "./fig/directedg";
 import Undirected from "./fig/undirectedg";
 import Weighted from "./fig/Weighted";
@@ -48,10 +47,12 @@ export default function Background(){
                     V = {"{a, b, c, d, e}"} <br />
                     E = {"{ab, ac, bd, cd, de}"}
                 </p>
-                <div className="figure" >
-                    <Graph/>
+                <div className="flex justify-center my-8"> 
+                    <div className="reveal rounded-xl bg-[#F5F5F5] px-4 w-[50%]" >
+                        <img src="/graph_data_structure-removebg-preview.png" alt="Graph Structure" />
+                        <div className="reveal text-black fig">Fig.1 Graph Structure</div>
+                    </div>
                 </div>
-                <p className="reveal fig">Fig.1 Graph Structure</p>
                 <p className="pt-4 reveal">
                     <span className="font-semibold">Adjacency relation: </span> Node B is adjacent to A if
                     there is an edge from A to B. <br />
@@ -142,7 +143,7 @@ export default function Background(){
                 a vertex to itself. Example of a directed graph
                 is shown in Fig. 2.
             </span>
-            <div className="figure">
+            <div className="reveal figure">
                 <Directed/>
             </div>
             <div className="fig reveal">Fig. 2 Directed graph</div>
@@ -156,7 +157,7 @@ export default function Background(){
                 straight lines. Example of an undirected graph
                 is shown in Fig.
             </span>
-            <div className="figure">
+            <div className="reveal figure">
                 <Undirected/>
             </div>
             <div className="fig reveal">Fig. 3Undirected graph</div>
@@ -169,7 +170,7 @@ export default function Background(){
                 the “cost” of the edge. Example of a weighted
                 graph is shown in Fig. 4.
             </span>
-            <div className="figure">
+            <div className="reveal figure">
                 <Weighted/>
             </div>
             <div className="fig reveal">Fig. 4 Weighted graph</div>

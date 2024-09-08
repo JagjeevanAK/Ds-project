@@ -5,20 +5,21 @@
 
 html {
   scroll-behavior: smooth;
+  background-color: black;
 }
 
 
 /* Apply Roboto for body text */
 body {
   font-family: 'Roboto', sans-serif;
-  color: #d3d3d3;
+  /* color: #d3d3d3; */
   /* Example color for text */
+
 }
 
 /* Apply Montserrat for headings */
 h1,h2,h3,h4,h5,h6 {
   font-family: 'Montserrat', sans-serif;
-  color: #ffffff;
   /* Example color for headings */
 }
 h4 {

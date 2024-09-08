@@ -20,7 +20,6 @@ function Graph() {
       { id: "Node 9", x: 300, y: 500 }
     ];
 
-    // Simplified links
     const links = [
       { source: "Node 1", target: "Node 2" },
       { source: "Node 2", target: "Node 3" },
@@ -41,15 +40,19 @@ function Graph() {
       .attr("height", height)
       .style("background-color", "transparent");
 
+    // Append 'g' to group everything for zoom
+    const g = svg.append("g");
+
+    // Define arrow marker
     svg.append("defs").selectAll("marker")
       .data(["arrow"])
       .enter().append("marker")
       .attr("id", d => d)
       .attr("viewBox", "0 0 10 10")
-      .attr("refX", 10)
-      .attr("refY", 5)
-      .attr("markerWidth", 8)
-      .attr("markerHeight", 8)
+      .attr("refX", 30) // Adjusted position
+      .attr("refY", 4)
+      .attr("markerWidth", 6)
+      .attr("markerHeight", 6)
       .attr("orient", "auto")
       .append("path")
       .attr("d", "M 0 0 L 10 5 L 0 10 z")
@@ -60,7 +63,7 @@ function Graph() {
       .force("charge", d3.forceManyBody().strength(-200))
       .force("center", d3.forceCenter(width / 2, height / 2));
 
-    const link = svg.selectAll("line")
+    const link = g.selectAll("line")
       .data(links)
       .enter()
       .append("line")
@@ -68,7 +71,7 @@ function Graph() {
       .style("stroke-width", 2)
       .attr("marker-end", "url(#arrow)");
 
-    const node = svg.selectAll("circle")
+    const node = g.selectAll("circle")
       .data(nodes)
       .enter()
       .append("circle")
@@ -80,7 +83,7 @@ function Graph() {
         alert(`Node clicked: ${d.id}`);
       });
 
-    const label = svg.selectAll("text")
+    const label = g.selectAll("text")
       .data(nodes)
       .enter()
       .append("text")
@@ -109,15 +112,10 @@ function Graph() {
     const zoom = d3.zoom()
       .scaleExtent([0.1, 10])
       .on("zoom", (event) => {
-        svg.selectAll("g").attr("transform", event.transform);
+        g.attr("transform", event.transform);
       });
 
     svg.call(zoom);
-
-    svg.append("g").selectAll("g")
-      .data(nodes)
-      .enter()
-      .append("g");
 
     simulation.on("tick", () => {
       link

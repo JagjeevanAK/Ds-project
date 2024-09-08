@@ -25,7 +25,6 @@ function App() {
         <div className="col-span-2 sticky top-0 reveal">
           <Sidebar />
         </div>
-
         <div className="col-span-8 p-8 reveal">
           <Content />
         </div>
