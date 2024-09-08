@@ -1,6 +1,8 @@
 import Application from "./Application";
 import Background from "./Background";
 import Conclusion from "./Conclusion";
+import Imp from "./Dfs&Bfs";
+import Example from "./Example";
 import Introduction from "./Introduction";
 import Referance from "./Reference";
 import Representation from "./Representation";
@@ -14,6 +16,8 @@ export default function Content(){
             <Representation/>
             <Traversal/>
             <Application/>
+            <Example/>
+            {/* <Imp/> */}
             <Conclusion/>
             <Referance/>
         </div>

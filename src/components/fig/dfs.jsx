@@ -1,57 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
+import React, { useEffect, useRef } from 'react';
+import * as d3 from 'd3';
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animated Weighted Graph</title>
-    <script src="https://d3js.org/d3.v7.min.js"></script>
-    <style>
-        svg {
-            width: 100%;
-            height: 80vh;
-            border: 1px solid #ccc;
-        }
-        .node {
-            stroke: #000;
-            stroke-width: 2px;
-        }
+const DFSVisualization = () => {
+    const svgRef = useRef(null);
 
-        .link {
-            stroke: #999;
-            stroke-opacity: 0.8;
-        }
+    useEffect(() => {
+        const svg = d3.select(svgRef.current);
+        svg.selectAll("*").remove(); // Clear previous content
 
-        text {
-            font-size: 12px;
-            pointer-events: none;
-            text-anchor: middle;
-            alignment-baseline: middle;
-        }
-
-        .unit {
-            font-size: 16px;
-            font-weight: bold;
-            text-anchor: middle;
-            alignment-baseline: middle;
-            fill: #333;
-        }
-    </style>
-</head>
-
-<body>
-    <h1>Animated Weighted Graph</h1>
-    <svg></svg>
-    <script>
         const width = window.innerWidth;
         const height = window.innerHeight * 0.8;
-        const scaleFactor = 1; // Adjust this factor to scale the viewBox
 
-        const svg = d3.select("svg")
+        svg
             .attr("width", width)
             .attr("height", height);
 
-        const distanceScaleFactor = 0.35; // Adjust this factor to scale distances for better visualization
+        const distanceScaleFactor = 0.35;
 
         const cities = [
             "Mumbai", "Delhi", "Bangalore", "Hyderabad", "Ahmedabad",
@@ -144,11 +108,11 @@
                 cities.forEach(targetCity => {
                     if (sourceCity !== targetCity) {
                         const distance = distances[sourceCity]?.[targetCity];
-                        if (distance && distance < 1600) { // Filter links based on distance
+                        if (distance && distance < 1600) {
                             links.push({
                                 source: sourceCity,
                                 target: targetCity,
-                                weight: distance * distanceScaleFactor // Apply scaling here
+                                weight: distance * distanceScaleFactor
                             });
                         }
                     }
@@ -158,15 +122,13 @@
         }
 
         const links = generateLinks(cities, distances);
-
         const nodes = cities.map(city => ({ id: city }));
 
         const simulation = d3.forceSimulation(nodes)
             .force("link", d3.forceLink(links).id(d => d.id).distance(d => d.weight))
             .force("charge", d3.forceManyBody().strength(-500))
-            .force("collide", d3.forceCollide(60))
-            .force("x", d3.forceX(width / 2).strength(0.1))
-            .force("y", d3.forceY(height / 2).strength(0.1));
+            .force("center", d3.forceCenter(width / 2, height / 2)) // Center the graph
+            .force("collide", d3.forceCollide(60));
 
         const link = svg.append("g")
             .attr("class", "links")
@@ -174,7 +136,8 @@
             .data(links)
             .enter().append("line")
             .attr("class", "link")
-            .attr("stroke-width", d => Math.sqrt(d.weight) / 2);
+            .attr("stroke-width", 2)
+            .attr("stroke", "#999");
 
         const node = svg.append("g")
             .attr("class", "nodes")
@@ -182,8 +145,9 @@
             .data(nodes)
             .enter().append("circle")
             .attr("class", "node")
-            .attr("r", 30)
+            .attr("r", 20)
             .attr("fill", "#69b3a2")
+            .attr("city-id", d => d.id)
             .call(drag(simulation));
 
         const text = svg.append("g")
@@ -194,12 +158,6 @@
             .text(d => d.id)
             .attr("x", 0)
             .attr("y", 5);
-
-        svg.append("text")
-            .attr("class", "unit")
-            .attr("x", width / 2)
-            .attr("y", 30)
-            .text(`Distances scaled by a factor of ${distanceScaleFactor}`);
 
         simulation.on("tick", () => {
             link
@@ -217,38 +175,40 @@
                 .attr("y", d => d.y);
         });
 
-        function animate() {
-            node.transition()
-                .duration(2000)
-                .attr("r", 40)
-                .transition()
-                .duration(2000)
-                .attr("r", 30)
-                .on("end", animate);
+        function dfs(graph, start) {
+            const visited = new Set();
+            const stack = [start];
 
-            link.transition()
-                .duration(2000)
-                .attr("stroke-width", 6)
-                .transition()
-                .duration(2000)
-                .attr("stroke-width", d => Math.sqrt(d.weight) / 2);
-        }
-        animate();
-
-        function updateView(view) {
-            switch (view) {
-                case 'top':
-                    svg.attr("viewBox", `0 0 ${width} ${height}`);
-                    break;
-                // Removed other cases
+            function visitNode(node) {
+                return new Promise(resolve => {
+                    setTimeout(() => {
+                        visited.add(node);
+                        d3.select(`circle[city-id='${node}']`).classed("visited", true);
+                        resolve();
+                    }, 500);
+                });
             }
-        }
 
-        function viewTop() {
-            updateView('top');
-        }
+            async function traverse() {
+                while (stack.length > 0) {
+                    const node = stack.pop();
+                    if (!visited.has(node)) {
+                        await visitNode(node);
+                        Object.keys(graph[node] || {}).forEach(neighbor => {
+                            if (!visited.has(neighbor)) {
+                                stack.push(neighbor);
+                            }
+                        });
+                    }
+                }
+                setTimeout(() => {
+                    d3.selectAll("circle").classed("visited", false);
+                    dfs(graph, "Mumbai");
+                }, 2000);
+            }
 
-        viewTop(); // Set initial view to top
+            traverse();
+        }
 
         function drag(simulation) {
             function dragstarted(event, d) {
@@ -274,7 +234,17 @@
                 .on("drag", dragged)
                 .on("end", dragended);
         }
-    </script>
-</body>
 
-</html>
+        dfs(distances, "Mumbai");
+
+    }, []);
+
+    return (
+        <div className="p-4">
+            <h1 className="text-2xl font-bold mb-4">DFS Visualization with Distances</h1>
+            <svg ref={svgRef} className="border border-gray-300 w-full h-[80vh]"></svg>
+        </div>
+    );
+};
+
+export default DFSVisualization;
