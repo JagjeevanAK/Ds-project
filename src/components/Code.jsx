@@ -4,6 +4,15 @@ import hljs from 'highlight.js';
 import { ClipboardCopy } from 'lucide-react';
 import './CodeSnippet.css';
 
+const escapeHtml = (unsafe) => {
+  return unsafe
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
+};
+
 const Code = ({ codeSnippets }) => {
   const [selectedLanguage, setSelectedLanguage] = useState(Object.keys(codeSnippets)[0]);
   const [showCopyTooltip, setShowCopyTooltip] = useState(false);
@@ -15,33 +24,37 @@ const Code = ({ codeSnippets }) => {
 
   useEffect(() => {
     if (codeRef.current) {
+      // Escape HTML before highlighting
+      const escapedCode = escapeHtml(codeSnippets[selectedLanguage]);
+
       codeRef.current.className = `language-${selectedLanguage}`;
-      codeRef.current.innerHTML = hljs.highlight(
-        codeSnippets[selectedLanguage],
-        { language: selectedLanguage }
-      ).value;
+      codeRef.current.innerHTML = hljs.highlight(escapedCode, {
+        language: selectedLanguage,
+      }).value;
+
       hljs.highlightElement(codeRef.current);
     }
   }, [selectedLanguage, codeSnippets]);
 
   const copyToClipboard = () => {
-    navigator.clipboard.writeText(codeSnippets[selectedLanguage])
+    navigator.clipboard
+      .writeText(codeSnippets[selectedLanguage])
       .then(() => {
         setShowCopyTooltip(true);
         setTimeout(() => setShowCopyTooltip(false), 2000);
       })
-      .catch(err => {
+      .catch((err) => {
         console.error('Failed to copy code: ', err);
       });
   };
 
   return (
-    <div className="code-snippet-container ">
+    <div className="code-snippet-container">
       <div className="language-buttons">
         {Object.keys(codeSnippets).map((lang) => (
-          <button 
-            key={lang} 
-            className={`lang-btn ${selectedLanguage === lang ? 'active' : ''}`} 
+          <button
+            key={lang}
+            className={`lang-btn ${selectedLanguage === lang ? 'active' : ''}`}
             onClick={() => handleLanguageChange(lang)}
           >
             {lang.toUpperCase()}
