@@ -12,6 +12,7 @@ export default function Representation(){
           duration: 1000,
           delay: 200,
           reset: true, 
+          viewOffset: { bottom: 50 },
         });
     }, []);
 

@@ -11,6 +11,7 @@ export default function Traversal(){
           duration: 1000,
           delay: 200,
           reset: true, 
+          viewOffset: { bottom: 50 },
         });
     }, []);
 
