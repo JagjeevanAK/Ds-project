@@ -37,7 +37,7 @@ export default function Representation(){
                 <span className="reveal">
                     This structure simply maintains
                     and stores the vertices and the edges into
-                    unsorted sequences. Advantage: Easy to
+                    unsorted sequences. <br /> Advantage: Easy to
                     implement and iterate over small edges.
                 </span>
                 <p className="mt-6 reveal">
