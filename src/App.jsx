@@ -1,20 +1,8 @@
-import { useEffect } from "react";
 import Content from "./components/Content";
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
-import ScrollReveal from "scrollreveal";
 
 function App() {
-  useEffect(() => {
-    ScrollReveal().reveal(".reveal", {
-      origin: "bottom",
-      distance: "50px",
-      duration: 1000,
-      delay: 200,
-      reset: true,
-    });
-  }, []);
-
   return (
     <div className="bg-gradient-to-b from-[#1a1a2e] via-[#16213e] to-[#0f3460] text-[#e5e5e5] min-h-screen">
       <div className="reveal">

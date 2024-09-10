@@ -1,20 +1,8 @@
-import { useEffect } from "react";
-import scrollreveal from "scrollreveal";
 import Code from "./Code";
 import './line.css';
 import AdjacencyList from "./fig/Al";
 
 export default function Representation(){
-    useEffect(() => {
-        scrollreveal().reveal(".reveal", {
-          origin: "bottom",
-          distance: "50px",
-          duration: 1000,
-          delay: 200,
-          reset: false, 
-        });
-    }, []);
-
     return(
         <div>
             <div className="base">
