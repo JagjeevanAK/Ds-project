@@ -65,7 +65,7 @@ export default function Sidebar() {
   return (
     <div className="sticky top-0">
       <div 
-        className="float-right mt-5 mr-6 p-6 rounded-lg transition-transform transition-opacity duration-1000 ease-in-out"
+        className="float-right mt-2 mr-6 p-6 rounded-lg transition-transform transition-opacity duration-1000 ease-in-out"
         style={{
           background: sidebarBackground,
           opacity: opacity,
