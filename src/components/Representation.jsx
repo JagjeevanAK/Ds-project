@@ -11,8 +11,7 @@ export default function Representation(){
           distance: "50px",
           duration: 1000,
           delay: 200,
-          reset: true, 
-          viewOffset: { bottom: 50 },
+          reset: false, 
         });
     }, []);
 
