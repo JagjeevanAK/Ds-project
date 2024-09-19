@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import Application from "./Application";
 import Background from "./Background";
 import Conclusion from "./Conclusion";
@@ -10,15 +10,15 @@ import Traversal from "./Traversal";
 import scrollreveal from "scrollreveal";
 
 export default function Content(){
-    useEffect(() => {
-    scrollreveal().reveal(".reveal", {
-      origin: "bottom",
-      distance: "50px",
-      duration: 1000,
-      delay: 200,
-      reset: true,
-    });
-  }, []);
+  //   useEffect(() => {
+  //   scrollreveal().reveal(".reveal", {
+  //     origin: "bottom",
+  //     distance: "50px",
+  //     duration: 1000,
+  //     delay: 200,
+  //     reset: true,
+  //   });
+  // }, []);
     return(
         <div>
             <Introduction/>
